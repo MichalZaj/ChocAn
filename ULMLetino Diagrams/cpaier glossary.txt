@@ -1,0 +1,11 @@
+Glossary
+1. Provider - Health care professional who provides services to ChocAn members
+2. Member - Individual addicted to chocolate who pays monthly fee entightling them to unlimited consultations and treatments
+3. Provider Directory - alphabetically ordered list of service names and correspondning service codes and fees
+4. Weekly report - a list of services provided to a member or by a provider, sorted in order of service date, also sent as an e-mail attachmment
+5. Summary report - list given to manager for accounts payable of every provider to be paid each week, the consultations had, and total fee
+6. EFT data - Electronic funds transfer data that is written to a disk that banking computers will later ensure the provider's bank account is credited with the appropriate amount
+7. Interactive mode - how the software ar ChocAn data center is ran during the day to allow operators to add/delete/update member/provider records
+8. Main accounting procedure - reads the week’s file of services provided and prints a number of reports at midnight on Friday at the ChocAn Data Center
+9. Member suspended - message to inicate that fees are owed (that is, the member has not paid membership fees for at least a month) and member status has been set to suspended
+10. Service code - six-digit code corresponding to a service used in the Provider Directory 
