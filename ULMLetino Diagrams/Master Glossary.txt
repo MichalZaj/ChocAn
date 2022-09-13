@@ -1,11 +1,32 @@
-Glossary:
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+Glossary 
+Actors
+1. Provider - Health care professional who provides ChocAn services
+2. Automated Operator - The bot that runs certain processes/use cases autonomously
+3. Operator - ChocAn employee who is able to edit records
+4. Manager - ChocAn senior employee who is able to create weekly summaries 
+
+Use Cases
+1. Enter Provider Number - Process of typing provider number into terminal
+2. Validate Member - Process of swiping and validating the card of a member
+3. Report Appointment - After an appointment occurs, this process records it onto the disk
+4. Request Provider Directory - Process of the provider asking for a provider directory
+5. Update Member Records - Process of changing member records
+6. Delete Member - Option within update member records, that allows operator to delete members from ChocAn system
+7. Add New Member -  Option within update member records, that allows operator to add new members to ChocAn system
+8. Update provider Records - Process of changing provider records
+9. Delete Provider - Option within update provider records, that allows operator to delete provider from ChocAn system
+10. Add New Provider -  Option within update member records, that allows operator to add new providers to ChocAn system
+11. Main Account Procedure - The main accounting procedure that happens on fridays
+12. Create Weekly Summary - The process of creating weekly summaries for members and providers
+
+
+Misc.
+1. Member - Paying subscriber to ChocAn who is up to date on payments
+2. Terminal - The device that the health care professional uses to access ChocAn software
+3. Suspended Member - Member who has missed a payment but has not terminated their membership
+4. Plastic Card - Unique ID card given to all members that is used in validation
+5. Provider Directory - File containing all possible service ID codes in alphabetical order 
+6. Weekly report- A financial/order history statement sent to all ChocAn members each week
+7. EFT Data- Electronic funds transfer data which is used by the banking software to record and manage all funds transferred through ChocAn
+8. Summary report- Weekly report sent to a ChocAn manager which lists all provider activities, including sessions and services, and the amount providers are owed
+9. Service code - six-digit code corresponding to a service used in the Provider Directory 
