@@ -1,0 +1,38 @@
+Use Case: Enter Provider Number
+Context: At the start of day, enter provider number for ChocAn billing purposes
+Actors: Provider
+Main Success Scenario
+1. Terminal is powered on
+2. Provider enters in their Provider Pin
+3. Terminal is ready for use
+Extensions: 
+N/A
+
+Use Case: Validate Member
+Actors: Provider
+Main Success Scenario
+1. Provider swipes patient's card
+2. Terminal communicates with ChocAn data center and confirms that the member exists and is up to date financially
+3. Terminal displays "Validated"
+Extensions:
+3a. Patient's card is not recognized and screen displays "Invalid Number"
+3b. Patient is not up to date on payments and screen displays "Member suspended"
+
+Use Case: Report Appointment
+Actors: Provider
+Context: After an appointment happens, the provider records the appointment into ChocAn services for eventual reimbursement
+Main Success Scenario
+1. Provider Validates the Member
+2. Provider enters service date in the format MM-DD-YYYY
+3. Provider searches provider directory for service code
+4. Software validates service code and presents to provider
+5. Provider enters comments about service provided
+6. Software writes to disk a record with the following information
+	Current date and time
+	Date service was provided
+	Provider number
+	Service code
+	Comments (100 characters, optional)
+7. Software displays correct fee to be paid to provider
+Extensions
+4a. If service code invalid, display error message and prompt retype code
