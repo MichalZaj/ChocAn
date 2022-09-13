@@ -30,3 +30,5 @@ Misc.
 7. EFT Data- Electronic funds transfer data which is used by the banking software to record and manage all funds transferred through ChocAn
 8. Summary report- Weekly report sent to a ChocAn manager which lists all provider activities, including sessions and services, and the amount providers are owed
 9. Service code - six-digit code corresponding to a service used in the Provider Directory 
+10. Provider Number - Unique number each provider enters to turn on their terminal
+
