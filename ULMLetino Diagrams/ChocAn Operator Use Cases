@@ -1,67 +1,13 @@
-Use case: Add new members
-Context: Add a new member to the ChocAn program
-Actors: ChocAn Operator
-Main Success Scenario: 
-Receive identifying information from the new member (name, email, address, etc)
-Encode member information onto an empty plastic card
-Communicate to ACME to add member to monthly billing process
-Add member to the weekly report process
-Extensions:
-N/A
-
-Use case: Delete members
-Context: Delete a member from the ChocAn program
-Actors: ChocAn Operator
-Main Success Scenario: 
-Receive plastic card from member
-Receive any outstanding payments from member
-Communicate to ACME to remove member from monthly billing process
-Remove member from weekly report process
-Remove member info attached to their member number
-Extensions:
-N/A
-
 Use case: Update member records
-Context: Edit a ChocAn member’s information
+Context: Edit a ChocAn member’s information, extends into adding, deleting, or editing
 Actors: ChocAn Operator
 Main Success Scenario: 
-Receive information changes from member
-Update the corresponding information
+1. Receive information changes from operator
+2. Update the corresponding information
 Communicate to ACME to update member information if it is relevant to the monthly billing process
 Extensions:
-N/A
+2a. Add member to directory
+2b. Remove member from directory
+2c. Edit member information
 
-Use case: Add new provider records
-Context: Add a new provider to the ChocAn program
-Actors: ChocAn Operator
-Main Success Scenario: 
-Receive identifying information from the new provider (name, email, address, etc)
-Encode provider information onto an empty plastic card
-Assign provider a new service code
-Communicate to ACME to add provider to monthly accounting process
-Add provider to the weekly report process
-Extensions:
-N/A
-
-Use case: Delete provider records
-Context: Delete a provider from the ChocAn program
-Actors: ChocAn Operator
-Main Success Scenario: 
-Receive plastic card from provider
-Deliver any outstanding payments to provider
-Communicate to ACME to remove provider from monthly accounting process
-Remove provider from weekly report process
-Remove provider info attached to their provider number and service code
-Extensions:
-N/A
-
-Use case: Update provider records
-Context: Edit a provider’s information
-Actors: ChocAn Operator
-Main Success Scenario: 
-Receive information changes from provider
-Update the corresponding information
-Communicate to ACME to update provider information if it is relevant to the monthly accounting process
-Extensions:
-N/A
 
