@@ -1,6 +1,6 @@
 Use case: Update member records
 Context: Edit a ChocAn member’s information, extends into adding, deleting, or editing
-Actors: ChocAn Operator
+Actors: Operator
 Main Success Scenario: 
 1. Receive information changes from operator
 2. Update the corresponding information
@@ -12,7 +12,7 @@ Extensions:
 
 Use case: Update provider records
 Context: Edit a ChocAn provider’s information, extends into adding, deleting, or editing
-Actors: ChocAn Operator
+Actors: Operator
 Main Success Scenario: 
 1. Receive information changes from operator
 2. Update the corresponding information
