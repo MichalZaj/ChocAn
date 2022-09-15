@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Project 1 Team 17</title>  
+	</head>
+
+
+	<body>
+		
+		<style>
+    			table,
+    			th,
+    			td {
+        			border: 1px solid black;
+        			border-collapse: collapse;
+    			}
+			th,
+    			td {
+        			padding: 10px;
+    			}
+			tr:nth-child(even) {
+  			background-color: #F0FFFF;
+			}
+			.center {
+  				margin-left: auto;
+ 				margin-right: auto;
+			}
+    		</style>
+		<table style=width:50%, class="center">
+			<caption><h2>Team 17</h2></caption>
+			<thead>
+				<tr>
+					<th><strong>Student Name</strong></th>
+					<th><strong>Student Email</strong></th>
+					<th><strong>CWID</strong></th>
+					<th><strong>Hours</strong></th>
+					<th><strong>Role</strong></th>
+					<th><strong>Contribution</strong></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Cristina Paier</td>
+					<td>cpaier@crimson.ua.edu</td>
+					<td>12063963</td>
+					<td>4</td>
+					<td>Submitter</td>
+					<td>20%</td>
+				</tr>
+
+				<tr>
+					<td>Brent Christian</td>
+					<td>bmchristian@crimson.ua.edu</td>
+					<td>12086704</td>
+					<td>2</td>
+					<td>Assisted with Use Case Diagram and Glossary</td>
+					<td>10%</td>
+				</tr>
+				<tr>
+					<td>Caleb Messerly</td>
+					<td>cjmesserly@crimson.ua.edu</td>
+					<td>12159843</td>
+					<td>4</td>
+					<td>Glossary</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Gabe Gros</td>
+					<td>gcgros@crimson.ua.edu</td>
+					<td>12121855</td>
+					<td>4</td>
+					<td>Use Case Descriptions</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Mike Zajac</td>
+					<td>mpzajac@crimson.ua.edu</td>
+					<td>12138203</td>
+					<td>2</td>
+					<td>Assisted with Use Case Diagram and Glossary</td>
+					<td>10%</td>
+				</tr>
+				<tr>
+					<td>Thomas Roden</td>
+					<td>taroden@crimson.ua.edu</td>
+					<td>11930484</td>
+					<td>4</td>
+					<td>UML Diagram</td>
+					<td>20%</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+
+		<p>
+
+		<h3>Bitbucket Statistics</h3>
+
+
+		<img src = "C:\Users\crist\git\Fall2022Team17\Team_17Requirements\Bitbucket Statistics 1.png", style=width:75%>
+		<img src = "C:\Users\crist\git\Fall2022Team17\Team_17Requirements\Bitbucket Statistics 2.png", style=width:75%>
+		<img src = "C:\Users\crist\git\Fall2022Team17\Team_17Requirements\Bitbucket Statistics 3.png", style=width:75%>
+
+		</p>
+
+
+
+		<p><h3>ChocAn Data Processing Software Solution</h3></p>
+
+		<p>ChocAn needs processing software that can perform a variety of use cases for all its users: providers, managers, operators, and interact with a timer. 
+This software will be able to read data from a provider’s terminal, a manager’s terminal, and be used in interactive mode by operators at the data center. Our goals are only within the scope of the ChocAn data processing software 
+and will not extend to communication software, the design of the terminals, software needed for the Acme Accounting Services, or implementing the EFT data. Our report deliverable includes a glossary, UML Use Case Diagram, use case descriptions, 
+and our statistics of the group as we work to plan and develop the software. The glossary includes key terms critical to a comprehensive view of the system. The UML Use Case diagram is a visual representation of the goals of the system and the users' interaction with it. 
+The descriptions include an enumerated explanation of each use case laid out in the diagram. And, finally the statistics included will show each member of this team's credentials and contribution to the project. Our submitter is Cristina Paier, and was responsible for creating this report; 
+all other team members will submit a report with their individual UML Use Case diagram included and contribution table.</p>
+
+
+		<p>
+			<h3>Glossary</h3>
+
+
+			<dl>
+			<strong>Actors</strong>
+  			<dt>Provider</dt>
+  			<dd>- Health care professional who provides ChocAn services.</dd>
+  			<dt>Timer</dt>
+  			<dd>- Clock device that automatically runs the main accounting procedure on Fridays at 5pm.</dd>
+			<dt>Operator</dt>
+  			<dd>- ChocAn employee who is able to edit records.</dd>
+  			<dt>Manager</dt>
+  			<dd>- ChocAn senior employee who is able to create weekly summaries.</dd>
+			</dl>
+
+
+			<dl>
+			<strong>Use Cases</strong>
+  			<dt>Validate Member</dt>
+  			<dd>- Process of swiping and validating the card of a member.</dd>
+			<dt>Bill ChocAn for a service</dt>
+  			<dd>- After an appointment occurs, this process records it onto the disk.</dd>
+  			<dt>Request Provider Directory</dt>
+  			<dd>- Process of the provider asking for a provider directory.</dd>
+  			<dt>Update Member Records</dt>
+  			<dd>- Process of changing member records.</dd>
+  			<dt>Delete Member</dt>
+  			<dd>- Option within update member records, that allows operator to delete members from ChocAn system.</dd>
+			<dt>Add New Member</dt>
+  			<dd>- Option within update member records, that allows operator to add new members to ChocAn system.</dd>
+  			<dt>Edit Member</dt>
+			<dd> - Option within update member records, that allows operators to edit member information in ChocAn system.</dd>
+			<dt>Update provider Records</dt>
+  			<dd>- Process of changing provider records.</dd>
+  			<dt>Delete Provider</dt>
+  			<dd>- Option within update provider records, that allows operator to delete provider from ChocAn system.</dd>
+  			<dt>Add New Provider</dt>
+  			<dd>- Option within update member records, that allows operator to add new providers to ChocAn system.</dd>
+			<dt>Edit Provider</dt>
+  			<dd>- Option within update member records, that allows operator to edit provider information in ChocAn system.</dd>
+			<dt>Main Accounting Procedure</dt>
+  			<dd>- The main accounting procedure that happens on fridays.</dd>
+  			<dt>Create Provider Report</dt>
+  			<dd>- The creation of the Provider Report, see provider report in MISC.</dd>
+  			<dt>Create Member Report</dt>
+  			<dd>- The creation of the Member Report, see provider report in MISC.</dd>
+  			<dt>Create EFT Report</dt>
+  			<dd>- The creation of the EFT Report, see provider report in MISC.</dd>
+  			<dt>Create Summary Report</dt>
+  			<dd>- The creation of the Summary Report, see provider report in MISC.</dd>
+  			<dt>Request Weekly Report</dt>
+  			<dd>- The process of the manager actor requesting the Provider, Member, EFT, or Summary report.</dd>
+			</dl>
+
+			<dl>
+			<strong>Misc.</strong>
+  			<dt>Member</dt>
+  			<dd>- Paying subscriber to ChocAn who is up to date on payments.</dd>
+  			<dt>Terminal</dt>
+  			<dd>- The device that the health care professional uses to access ChocAn software.</dd>
+			<dt>Suspended Member</dt>
+  			<dd>- Member who has missed a payment but has not terminated their membership.</dd>
+  			<dt>Plastic Card</dt>
+  			<dd>- Unique ID card given to all members that is used in validation.</dd>
+  			<dt>Provider Directory</dt>
+  			<dd>- File containing all possible service ID codes in alphabetical order.</dd>
+  			<dt>Weekly report</dt>
+  			<dd>- A financial/order history statement sent to all ChocAn members each week.</dd>
+			<dt>EFT Data</dt>
+  			<dd>- Electronic funds transfer data which is used by the banking software to record and manage all funds transferred through ChocAn.</dd>
+  			<dt>Summary report</dt>
+  			<dd>- Weekly report sent to a ChocAn manager which lists all provider activities, including sessions and services, and the amount providers are owed.</dd>
+  			<dt>Service code</dt>
+  			<dd>- Six-digit code corresponding to a service used in the Provider Directory.</dd>
+  			<dt>Provider Number</dt>
+  			<dd>- Unique number each provider enters to turn on their terminal.</dd>
+  			<dt>Provider Report</dt>
+  			<dd>- Report of all ChocAn services provided to members that week, which should match the provider's own records. Included is the following information:
+	<br>&emsp;a. Provider name (25 characters). 
+ 	<br>&emsp;b. Provider number (9 digits). 
+ 	<br>&emsp;c. Provider street address (25 characters). 
+ 	<br>&emsp;d. Provider city (14 characters). 
+ 	<br>&emsp;e. Provider state (2 letters). 
+ 	<br>&emsp;f. Provider ZIP code (5 digits). 
+ 	<br>&emsp;g. For each service provided, the following details are required: 
+ 		<br>&emsp;&emsp;- Date of service (MM–DD–YYYY). 
+ 		<br>&emsp;&emsp;- Date and time data were received by the computer (MM–DD–YYYY HH:MM:SS). 
+ 		<br>&emsp;&emsp;- Member name (25 characters). 
+ 		<br>&emsp;&emsp;- Member number (9 digits). 
+ 		<br>&emsp;&emsp;- Service code (6 digits). 
+ 		<br>&emsp;&emsp;- Fee to be paid (up to $999.99). 
+ 	<br>&emsp;h. Total number of consultations with members (3 digits). 
+ 	<br>&emsp;i. Total fee for week (up to $99,999.99).</dd>
+  			<dt> Member Report</dt>
+  			<dd>- Report to member summarizing account as well as each appointment from that week, with the following information: Member name (25 characters). 
+ 	<br>&emsp;a. Member number (9 digits). 
+ 	<br>&emsp;b. Member street address (25 characters). 
+ 	<br>&emsp;c. Member city (14 characters). 
+ 	<br>&emsp;d. Member state (2 letters). 
+ 	<br>&emsp;e. Member ZIP code (5 digits). 
+ 	<br>&emsp;f. For each service provided, the following details are required: 
+ 		<br>&emsp;&emsp;- Date of service (MM–DD–YYYY). 
+ 		<br>&emsp;&emsp;- Provider name (25 characters). 
+ 		<br>&emsp;&emsp;- Service name (20 characters). </dd>
+  			<dt>EFT Report</dt>
+  			<dd>- Report for banking software to perform financial transfers to providers.</dd>
+			</dl>
+	
+		</p>
+
+		
+
+		<p>
+			<h3>UML Use Case Diagram</h3>
+
+			<style>
+				.centerImage {
+				  display: block;
+				  margin-left: auto;
+				  margin-right: auto;
+				}
+			</style>
+
+			<img src = "C:\Users\crist\git\Fall2022Team17\Team_17Requirements\P1UMLF2.png", style=width:50%, class="centerImage">
+
+
+		</p>
+
+		<p>
+			<h3>Use Case Descriptions</h3>
+
+			<style>
+    			table,
+    			td {
+        			border: .5px solid black;
+        			border-collapse: collapse;
+    			}
+			th,
+    			td {
+        			padding: 5px;
+    			}
+			tr:nth-child(even) {
+  			background-color: #F0FFFF;
+			}
+
+    		</style>
+		<table>
+
+			<tbody>
+				<tr><td>
+				<p><strong>Use case:</strong> Update member records</p>
+				<p><strong>Context:</strong> Edit a ChocAn member’s information, extends into adding, deleting, or editing</p>
+				<p><strong>Actors:</strong> Operator</p>
+				<p><strong>Main Success Scenario:</strong></p>
+				<p>1. Receive information changes from operator</p>
+				<p>2. Update the corresponding information</p>
+				<p>Communicate to ACME to update member information if it is relevant to the monthly billing process</p>
+				<p><strong>Extensions:</strong></p>
+				<p>2a. Add member to directory</p>
+				<p>2b. Remove member from directory</p>
+				<p>2c. Edit member information</p>
+				</td></tr>
+				<tr><td>
+				<p><strong>Use case:</strong> Update provider records</p>
+				<p><strong>Context:</strong> Edit a ChocAn provider’s information, extends into adding, deleting, or editing</p>
+				<p><strong>Actors:</strong> Operator</p>
+				<p><strong>Main Success Scenario:</strong> </p>
+				<p>1. Receive information changes from operator</p>
+				<p>2. Update the corresponding information</p>
+				<p><strong>Extensions:</strong></p>
+				<p>2a. Add provider to directory</p>
+				<p>2b. Remove provider from directory</p>
+				<p>2c. Edit provider information</p>
+				</td></tr>
+				<tr><td>
+				<p><strong>Use case:</strong> Validates Member</p>
+				<p><strong>Context:</strong> In order to provide service, provider must swipe card and confirm the member exists and is up to date with payments</p>
+				<p><strong>Actors:</strong> Provider</p>
+				<p><strong>Main Success Scenario:</strong>
+				<p>1. Provider swipes patient's card</p>
+				<p>2. Terminal communicates with ChocAn data center and confirms that the member exists and is up to date financially</p>
+				<p>3. Terminal displays "Validated"</p>
+				<p><strong>Extensions:</strong></p>
+				<p>3a. Patient's card is not recognized and screen displays "Invalid Number"</p>
+				<p>3b. Patient is not up to date on payments and screen displays "Member suspended"</p>
+				</td></tr>
+				<tr><td>
+				<p><strong>Use Case:</strong> Bills ChocAn for service</p>
+				<p><strong>Actors:</strong> Provider</p>
+				<p><strong>Context:</strong> After an appointment happens, the provider records the appointment into ChocAn services for eventual reimbursement</p>
+				<p><strong>Main Success Scenario:</strong></p>
+				<p>1. Provider does the Validates Member subprocess</p>
+				<p>2. Provider enters service date in the format MM-DD-YYYY</p>
+				<p>3. Provider searches provider directory for service code</p>
+				<p>4. Software validates service code and presents to provider</p>
+				<p>5. Provider enters comments about service provided</p>
+				<p>6. Software writes to disk a record with the following information</p>
+				<p>&emsp;6a. Current date and time</p>
+				<p>&emsp;6b. Date service was provided</p>
+				<p>&emsp;6c. Provider number</p>
+				<p>&emsp;6d. Service code</p>
+				<p>&emsp;6e. Comments (100 characters, optional)</p>
+				<p>7. Software displays correct fee to be paid to provider</p>
+				<p><strong>Extensions:</strong></p>
+				<p>4a. If service code invalid, display error message and prompt retype code</p>
+				</td></tr>
+				<tr><td>
+				<p><strong>Use Case:</strong> Request Provider Directory</p>
+				<p><strong>Actors:</strong> Provider</p>
+				<p><strong>Context:</strong> Provider desires a directory containing all product service service code</p>
+				<p><strong>Main Success Scenario:</strong></p>
+				<p>1. Provider submits a request for a directory</p>
+				<p>2. Directory is emailed to provider via communication software</p>
+				<p><strong>Extensions:</strong></p>
+				<p>N/A</p>
+				</td></tr>
+				<tr><td>
+				<p><strong>Use Case:</strong> Main accounting procedure</p>
+				<p><strong>Context:</strong> Collect information and compile information, incudes create provider report, create member report,create ETF report, create summary report</p>
+				<p><strong>Actors:</strong> Timer</p>
+				<p><strong>Main Success Scenario:</strong></p>
+				<p>1. Receive all accounting information during the normal business day </p>
+				<p>2. Compile information into their corresponding reports</p>
+				<p><strong>Extensions:</strong></p>
+				<p>2a. Create provider report</p>
+				<p>2b. Create member report</p>
+				<p>2c. Create ETF report</p>
+				<p>2d. Create summary report</p>
+				</td></tr>
+				<tr><td>
+				<p><strong>Use Case:</strong> Request Weekly reports</p>
+				<p><strong>Context:</strong> Manager receives reports to send and review, extends to create provider report, create member report,create ETF report, create summary report</p>
+				<p><strong>Actors:</strong> Manager</p>
+				<p><strong>Main Success Scenario:</strong></p>
+				<p>1. The ChocAn manager requests certain reports (either routinely at the end of the week or whenever they want)</p>
+				<p>2. The reports are sent to the correct recipient</p>
+				<p><strong>Extensions</strong></p>
+				<p>N/A</p>
+
+
+
+			</tbody>
+		</p>
+
+	</body>
+
+</html>
