@@ -37,3 +37,12 @@ Main Success Scenario
 7. Software displays correct fee to be paid to provider
 Extensions
 4a. If service code invalid, display error message and prompt retype code
+
+Use Case: Request Provider Directory
+Actors: Provider
+Context: Provider desires a directory containing all product service service code
+Main Success Scenario
+1. Provider submits a request for a directory
+2. Directory is emailed to provider via communication software
+Extensions
+N/A
