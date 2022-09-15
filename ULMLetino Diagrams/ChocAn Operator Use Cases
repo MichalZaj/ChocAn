@@ -10,4 +10,13 @@ Extensions:
 2b. Remove member from directory
 2c. Edit member information
 
-
+Use case: Update provider records
+Context: Edit a ChocAn provider’s information, extends into adding, deleting, or editing
+Actors: ChocAn Operator
+Main Success Scenario: 
+1. Receive information changes from operator
+2. Update the corresponding information
+Extensions
+2a. Add provider to directory
+2b. Remove provider from directory
+2c. Edit provider information
