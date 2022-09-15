@@ -1,23 +1,28 @@
 Glossary 
 Actors
 1. Provider - Health care professional who provides ChocAn services
-2. Automated Operator - The bot that runs certain processes/use cases autonomously
+2. Timer - Clock device that automatically runs the main accounting procedure on Fridays at 5pm
 3. Operator - ChocAn employee who is able to edit records
 4. Manager - ChocAn senior employee who is able to create weekly summaries 
 
 Use Cases
-1. Enter Provider Number - Process of typing provider number into terminal
-2. Validate Member - Process of swiping and validating the card of a member
-3. Report Appointment - After an appointment occurs, this process records it onto the disk
-4. Request Provider Directory - Process of the provider asking for a provider directory
-5. Update Member Records - Process of changing member records
-6. Delete Member - Option within update member records, that allows operator to delete members from ChocAn system
-7. Add New Member -  Option within update member records, that allows operator to add new members to ChocAn system
-8. Update provider Records - Process of changing provider records
+1. Validate Member - Process of swiping and validating the card of a member
+2. Bills ChocAn for service - After an appointment occurs, this process records it onto the disk
+3. Request Provider Directory - Process of the provider asking for a provider directory
+4. Update Member Records - Process of changing member records
+5. Delete Member - Option within update member records, that allows operator to delete members from ChocAn system
+6. Add New Member -  Option within update member records, that allows operator to add new members to ChocAn system
+7. Edit Member - Option within update member records, that allows operators to edit member information in ChocAn system
+8. Update Provider Records - Process of changing provider records
 9. Delete Provider - Option within update provider records, that allows operator to delete provider from ChocAn system
 10. Add New Provider -  Option within update member records, that allows operator to add new providers to ChocAn system
-11. Main Account Procedure - The main accounting procedure that happens on fridays
-12. Create Weekly Summary - The process of creating weekly summaries for members and providers
+11. Edit Provider - Option within update member records, that allows operator to edit provider information in ChocAn system
+12. Main Account Procedure - The main accounting procedure that happens on fridays
+13. Create Provider Report - The creation of the Provider Report, see provider report in MISC.
+14. Create Member Report - The creation of the Member Report, see provider report in MISC.
+15. Create EFT Report - The creation of the EFT Report, see provider report in MISC.
+16. Create Summary Report - The creation of the Summary Report, see provider report in MISC.
+17. Request Weekly Report - The process of the manager actor requesting the Provider, Member, EFT, or Summary report
 
 
 Misc.
@@ -31,4 +36,32 @@ Misc.
 8. Summary report- Weekly report sent to a ChocAn manager which lists all provider activities, including sessions and services, and the amount providers are owed
 9. Service code - six-digit code corresponding to a service used in the Provider Directory 
 10. Provider Number - Unique number each provider enters to turn on their terminal
-
+11. Provider Report - Report of all ChocAn services provided to members that week, which should match the provider's own records. Included is the following information:
+	11a. Provider name (25 characters). 
+ 	11b. Provider number (9 digits). 
+ 	11c. Provider street address (25 characters). 
+ 	11d. Provider city (14 characters). 
+ 	11e. Provider state (2 letters). 
+ 	11f. Provider ZIP code (5 digits). 
+ 	11g. For each service provided, the following details are required: 
+ 	11h. Date of service (MM–DD–YYYY). 
+ 	11i. Date and time data were received by the computer (MM–DD–YYYY HH:MM:SS). 
+ 	11j. Member name (25 characters). 
+ 	11k. Member number (9 digits). 
+ 	11l. Service code (6 digits). 
+ 	11m. Fee to be paid (up to $999.99). 
+ 	11n. Total number of consultations with members (3 digits). 
+ 	11o. Total fee for week (up to $99,999.99).
+12. Member Report - Report to member summarizing account as well as each appointment from that week, with the following information: Member name (25 characters). 
+ 	12a. Member number (9 digits). 
+ 	12b. Member street address (25 characters). 
+ 	12c. Member city (14 characters). 
+ 	12d. Member state (2 letters). 
+ 	12e. Member ZIP code (5 digits). 
+ 	12f. For each service provided, the following details are required: 
+ 		- Date of service (MM–DD–YYYY). 
+ 		- Provider name (25 characters). 
+ 		- Service name (20 characters). 
+13. EFT Report - Report for banking software to perform financial transfers to providers
+14. Summary Report - Report for manager detailing providers to be paid, the number of consultations each had, and that provider'stotal fee for the week.
+    Additionally, the total number of providers, consultations and fees are printed. 
