@@ -1,0 +1,22 @@
+Use case: Main accounting procedure
+Context: Collect information and compile information, incudes create provider report, create member report,
+create ETF report, create summary report
+Actors: Timer
+Main Success Scenario: 
+1. Receive all accounting information during the normal business day 
+2. Compile information into their corresponding reports
+Extensions:
+2a. create provider report
+2b. create member report
+2c. create ETF report
+2d. create summary report
+
+Use case: Request Weekly reports
+Context: Manager receives reports to send and review, extends to create provider report, create member report,
+create ETF report, create summary report
+Actors: Manager
+Main Success Scenario: 
+1. The ChocAn manager requests certain reports (either routinely at the end of the week or whenever they want)
+2. The reports are sent to the correct recipient
+Extensions:
+N/A
