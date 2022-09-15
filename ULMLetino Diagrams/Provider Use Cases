@@ -9,6 +9,7 @@ Extensions:
 N/A
 
 Use Case: Validates Member
+Context: In order to provide service, provider must swipe card and confirm the member exists and is up to date with payments
 Actors: Provider
 Main Success Scenario
 1. Provider swipes patient's card
