@@ -1,0 +1,88 @@
+Use case: Access Terminal
+Context: Acces Terminal to get to the member info and card
+Actors: Provider
+Main Success Scenario:
+1. Asked to enter provider number
+2. Terminal dials the ChocAn datacenter
+3. The ChocAn Data Center computer verifies the member number
+4. The word Validated appears on the one-line display
+Extensions:
+4a. “Invalid Number” is displayed
+4b. “Member suspended” is displayed
+
+Use case: Provides Health care service
+Context: Provides service to help people addicted to chocolate
+Actors: Provider
+Main Success Scenario:
+1. Member pays for the healthcare service
+2. Provides the service of unlimited consultations and treatments with health care professionals, namely, dietitians, internists, and exercise experts
+Extensions:
+N/A
+
+Use case: Requests Provider Directory
+Context: Requests provider directory to access a list
+Actors: Provider
+Main Success Scenario:
+1. Receives an alphabetically ordered list of service names and corresponding service codes and fees
+2. Directory is sent as an email attachment
+Extensions:
+N/A
+
+Use case: Bills the Member
+Context: Send a Bill to the Member to pay
+Actors: Provider
+Main Success Scenario:
+1. Sends a bill to the member for them to pay
+2. Member pays the bill
+Extensions:
+N/A
+
+Use case: Pays for Service
+Context: Member pays the bill for service
+Actors: Member
+Main Success Scenario:
+1. Member pays the bill in full for ChocAn service
+Extensions:
+N/A
+
+Use case: Receives Service
+Context: Member receives ChocAn service
+Actors: Member
+Main Success Scenario:
+1. Member receives the service of unlimited consultations and treatments with health care professionals, namely, dietitians, internists, and exercise experts
+2. Member name (25 characters). 
+3. Member number (9 digits).
+4. Member street address (25 characters). 
+5. Member city (14 characters). 
+6. Member state (2 letters). 
+7. Member ZIP code (5 digits). 
+8. For each service provided, the following details are required: Date of service (MM–DD–YYYY). Provider name (25 characters). Service name (20 characters).
+Extensions:
+N/A
+
+Use case: Interactive mode
+Context: Makes changes to member and provider records
+Actors: Operator
+Main Success Scenario:
+1. Add new member
+2. Delete existing member
+3. Update member record
+4. Add provider record
+5. Delete Provider record
+6. Update Provider record
+Extensions:
+N/A
+
+Use case: Weekly Summary
+Context: 
+Actors: Manager
+Main Success Scenario:
+1. Manager receives report of accounts payable
+2. The report lists every provider to be paid that week
+3. The number of consultations each member had
+4. Member’s total fee for that week
+5. The total number of providers who provided services
+6. The total number of consultations
+7. The overall fee total is printed. 
+Extensions:
+N/A
