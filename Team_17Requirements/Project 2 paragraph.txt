@@ -1,0 +1,11 @@
+
+The ChocAn System includes hardware for user interfaces that interact with the
+computerized processing software at the ChocAn Data Center. Providers, managers,
+and operators at the Data Center interact with individual terminals that include
+a keyboard and a screen. In order for these terminals to access the ChocAn data
+files stored on disks, the processing software validates each user and reflects 
+that computerized validation on their specific terminal. The ChocAn system also
+interacts with Acme Accounting Services computers and banking computers. 
+Additionally, the system is connected to a timer that automatically triggers the 
+main accounting procedure. Other computerized processes include printing/sending reports 
+as email attachments, totaling fees, and the validation process for the users. 
