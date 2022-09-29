@@ -47,50 +47,50 @@
 					<td>Cristina Paier</td>
 					<td>cpaier@crimson.ua.edu</td>
 					<td>12063963</td>
-					<td>4</td>
+					<td>Hours</td>
 					<td>Submitter</td>
-					<td>20%</td>
+					<td>16.67%</td>
 				</tr>
 
 				<tr>
 					<td>Brent Christian</td>
 					<td>bmchristian@crimson.ua.edu</td>
 					<td>12086704</td>
-					<td>2</td>
-					<td>Assisted with Use Case Diagram and Glossary</td>
-					<td>10%</td>
+					<td>Hours</td>
+					<td>Role</td>
+					<td>16.67%</td>
 				</tr>
 				<tr>
 					<td>Caleb Messerly</td>
 					<td>cjmesserly@crimson.ua.edu</td>
 					<td>12159843</td>
-					<td>4</td>
+					<td>Hours</td>
 					<td>Glossary</td>
-					<td>20%</td>
+					<td>16.67%</td>
 				</tr>
 				<tr>
 					<td>Gabe Gros</td>
 					<td>gcgros@crimson.ua.edu</td>
 					<td>12121855</td>
-					<td>4</td>
+					<td>Hours</td>
 					<td>Use Case Descriptions</td>
-					<td>20%</td>
+					<td>16.67%</td>
 				</tr>
 				<tr>
 					<td>Mike Zajac</td>
 					<td>mpzajac@crimson.ua.edu</td>
 					<td>12138203</td>
-					<td>2</td>
-					<td>Assisted with Use Case Diagram and Glossary</td>
-					<td>10%</td>
+					<td>Hours</td>
+					<td>Role</td>
+					<td>16.67%</td>
 				</tr>
 				<tr>
 					<td>Thomas Roden</td>
 					<td>taroden@crimson.ua.edu</td>
 					<td>11930484</td>
-					<td>4</td>
+					<td>Hours</td>
 					<td>UML Diagram</td>
-					<td>20%</td>
+					<td>16.67%</td>
 				</tr>
 			</tbody>
 
@@ -222,16 +222,14 @@ all other team members will submit a report with their individual UML Use Case d
 		<p>
 			<h3>UML Use Case Diagram</h3>
 
-			<style>
-				.centerImage {
+			<img src = "C:\Users\crist\git\Fall2022Team17\ULMLetino Diagrams\P1UMLF2.png" class="center">
+
+				.center {
 				  display: block;
 				  margin-left: auto;
 				  margin-right: auto;
+				  width: 50%;
 				}
-			</style>
-
-			<img src = "C:\Users\crist\git\Fall2022Team17\ULMLetino Diagrams\P1UMLF2.png", style=width:50%, class="centerImage">
-
 
 		</p>
 
@@ -276,7 +274,7 @@ all other team members will submit a report with their individual UML Use Case d
 				<p><strong>Main Success Scenario:</strong> </p>
 				<p>1. Receive information changes from operator</p>
 				<p>2. Update the corresponding information</p>
-				<p><strong>Extensions:</strong></p>
+				<p><strong>Extensions</strong></p>
 				<p>2a. Add provider to directory</p>
 				<p>2b. Remove provider from directory</p>
 				<p>2c. Edit provider information</p>
@@ -285,7 +283,7 @@ all other team members will submit a report with their individual UML Use Case d
 				<p><strong>Use case:</strong> Validates Member</p>
 				<p><strong>Context:</strong> In order to provide service, provider must swipe card and confirm the member exists and is up to date with payments</p>
 				<p><strong>Actors:</strong> Provider</p>
-				<p><strong>Main Success Scenario:</strong>
+				<p><strong>Main Success Scenario</strong>
 				<p>1. Provider swipes patient's card</p>
 				<p>2. Terminal communicates with ChocAn data center and confirms that the member exists and is up to date financially</p>
 				<p>3. Terminal displays "Validated"</p>
@@ -297,7 +295,7 @@ all other team members will submit a report with their individual UML Use Case d
 				<p><strong>Use Case:</strong> Bills ChocAn for service</p>
 				<p><strong>Actors:</strong> Provider</p>
 				<p><strong>Context:</strong> After an appointment happens, the provider records the appointment into ChocAn services for eventual reimbursement</p>
-				<p><strong>Main Success Scenario:</strong></p>
+				<p><strong>Main Success Scenario</strong></p>
 				<p>1. Provider does the Validates Member subprocess</p>
 				<p>2. Provider enters service date in the format MM-DD-YYYY</p>
 				<p>3. Provider searches provider directory for service code</p>
@@ -310,42 +308,11 @@ all other team members will submit a report with their individual UML Use Case d
 				<p>&emsp;6d. Service code</p>
 				<p>&emsp;6e. Comments (100 characters, optional)</p>
 				<p>7. Software displays correct fee to be paid to provider</p>
-				<p><strong>Extensions:</strong></p>
+				<p><strong>Extensions</strong></p>
 				<p>4a. If service code invalid, display error message and prompt retype code</p>
 				</td></tr>
 				<tr><td>
-				<p><strong>Use Case:</strong> Request Provider Directory</p>
-				<p><strong>Actors:</strong> Provider</p>
-				<p><strong>Context:</strong> Provider desires a directory containing all product service service code</p>
-				<p><strong>Main Success Scenario:</strong></p>
-				<p>1. Provider submits a request for a directory</p>
-				<p>2. Directory is emailed to provider via communication software</p>
-				<p><strong>Extensions:</strong></p>
-				<p>N/A</p>
-				</td></tr>
-				<tr><td>
-				<p><strong>Use Case:</strong> Main accounting procedure</p>
-				<p><strong>Context:</strong> Collect information and compile information, incudes create provider report, create member report,create ETF report, create summary report</p>
-				<p><strong>Actors:</strong> Timer</p>
-				<p><strong>Main Success Scenario:</strong></p>
-				<p>1. Receive all accounting information during the normal business day </p>
-				<p>2. Compile information into their corresponding reports</p>
-				<p><strong>Extensions:</strong></p>
-				<p>2a. Create provider report</p>
-				<p>2b. Create member report</p>
-				<p>2c. Create ETF report</p>
-				<p>2d. Create summary report</p>
-				</td></tr>
-				<tr><td>
-				<p><strong>Use Case:</strong> Request Weekly reports</p>
-				<p><strong>Context:</strong> Manager receives reports to send and review, extends to create provider report, create member report,create ETF report, create summary report</p>
-				<p><strong>Actors:</strong> Manager</p>
-				<p><strong>Main Success Scenario:</strong></p>
-				<p>1. The ChocAn manager requests certain reports (either routinely at the end of the week or whenever they want)</p>
-				<p>2. The reports are sent to the correct recipient</p>
-				<p><strong>Extensions</strong></p>
-				<p>N/A</p>
-
+				<p><strong>Use Case:</strong> 
 
 
 			</tbody>

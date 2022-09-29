@@ -96,6 +96,20 @@
 
 		</table>
 
+
+		<p>
+
+		<h3>Bitbucket Statistics</h3>
+
+
+		<img src = "C:\Users\crist\git\Fall2022Team17\Team_17Requirements\Bitbucket Statistics 1.png", style=width:75%>
+		<img src = "C:\Users\crist\git\Fall2022Team17\Team_17Requirements\Bitbucket Statistics 2.png", style=width:75%>
+		<img src = "C:\Users\crist\git\Fall2022Team17\Team_17Requirements\Bitbucket Statistics 3.png", style=width:75%>
+
+		</p>
+
+
+
 		<p><h3>ChocAn Data Processing Software Solution</h3></p>
 
 		<p>ChocAn needs processing software that can perform a variety of use cases for all its users: providers, managers, operators, and interact with a timer. 
@@ -230,7 +244,7 @@ all other team members will submit a report with their individual UML Use Case d
 				}
 			</style>
 
-			<img src = "C:\Users\crist\git\Fall2022Team17\ULMLetino Diagrams\P1UMLF2.png", style=width:50%, class="centerImage">
+			<img src = "C:\Users\crist\git\Fall2022Team17\Team_17Requirements\P1UMLF2.png", style=width:50%, class="centerImage">
 
 
 		</p>
