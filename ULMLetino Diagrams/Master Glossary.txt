@@ -62,24 +62,3 @@ Weekly report- A financial/order history statement sent to all ChocAn members ea
         
 
 
-    
-Use Cases
-1. Validate Member - Process of swiping and validating the card of a member
-2. Bills ChocAn for service - After an appointment occurs, this process records it onto the disk
-3. Request Provider Directory - Process of the provider asking for a provider directory
-4. Update Member Records - Process of changing member records
-5. Delete Member - Option within update member records, that allows operator to delete members from ChocAn system
-6. Add New Member -  Option within update member records, that allows operator to add new members to ChocAn system
-7. Edit Member - Option within update member records, that allows operators to edit member information in ChocAn system
-8. Update Provider Records - Process of changing provider records
-9. Delete Provider - Option within update provider records, that allows operator to delete provider from ChocAn system
-10. Add New Provider -  Option within update member records, that allows operator to add new providers to ChocAn system
-11. Edit Provider - Option within update member records, that allows operator to edit provider information in ChocAn system
-12. Main Account Procedure - The main accounting procedure that happens on fridays
-13. Create Provider Report - The creation of the Provider Report, see provider report in MISC.
-14. Create Member Report - The creation of the Member Report, see provider report in MISC.
-15. Create EFT Report - The creation of the EFT Report, see provider report in MISC.
-16. Create Summary Report - The creation of the Summary Report, see provider report in MISC.
-17. Request Weekly Report - The process of the manager actor requesting the Provider, Member, EFT, or Summary report
-
-
