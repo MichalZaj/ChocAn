@@ -19,4 +19,7 @@ Main Success Scenario:
 1. The ChocAn manager requests certain reports (either routinely at the end of the week or whenever they want)
 2. The reports are sent to the correct recipient
 Extensions:
-N/A
+1a. Manager requests the member report
+1b. Manager requests the provider report
+1c. Manager requests the summary report
+1d. Manager requests the ETF report
