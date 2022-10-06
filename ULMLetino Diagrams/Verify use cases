@@ -1,0 +1,31 @@
+Use case: Verify Member
+Context: Verify that this is a current ChocAn member
+Actors: ChocAn provider
+Main Success Scenario: 
+Receive member ID card
+Insert ID card into card reader
+Reader verifies that this is a current member
+Return card to member
+Provider is allowed to access member functions in system
+Extensions:
+3a. If reader does not verify member, they are not eligible for service
+
+Use case: Verify Provider
+Context: Verify that this is a current ChocAn Provider
+Actors: ChocAn Provider
+Main Success Scenario: 
+Provider inserts own ID card into card reader
+Reader verifies that this is a current provider
+Provider can access the system
+Extensions:
+3a. If reader does not verify provider, they will not be able to access system
+
+Use case: Verify Manager
+Context: Verify that this is a current ChocAn Manager
+Actors: ChocAn Manager
+Main Success Scenario: 
+Provider inserts own ID card into card reader
+Reader verifies that this is a current manager
+Manager can access the system
+Extensions:
+2a. If reader does not verify manager, they will not be able to access system
