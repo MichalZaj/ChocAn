@@ -1,0 +1,6 @@
+Our design of the ChocAn system demonstrates high cohesion and low coupling, as is associated with "good design". 
+When we look at the cohesion of our design, the classes are made up of several intentional methods that act on the same 
+data structure, therefore exhibiting a high degree of informational cohesion. Our design minimizes the number of classes that
+have access to each data set, of which is organized in their own classes. This demonstrates low coupling because there is 
+no content or common coupling. Overall, our classes are designed with their own attributes that have methods with one action, 
+operation, or purpose with those attributes.
