@@ -16,9 +16,7 @@ public class term {
     Scanner s = new Scanner(System.in);
     
     
-    Operator caleb = new Operator(123);
-    Manager thomas = new Manager(123);
-    Provider gabe = new Provider(123);
+    
     
     VerificationMenu myMenu = new VerificationMenu();
     String sentinelValue = "A";
@@ -37,12 +35,17 @@ public class term {
       switch (verificationPassed) {
         case('P'):
           System.out.println("Entering Provider Terminal");
+          ProviderMenu proMenu = new ProviderMenu();
+          proMenu.prompt();
           break;
         case('O'):
           System.out.println("Entering Operator Terminal");
+          OperatorMenu opMenu = new OperatorMenu();
+          opMenu.prompt();
           break;
         case('M'):
           System.out.println("Entering Manager Terminal");
+        
           break;
         default:
           System.out.println("Verification Failed");

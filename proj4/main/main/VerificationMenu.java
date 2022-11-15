@@ -47,14 +47,8 @@ public class VerificationMenu {
         System.out.println("Invalid input");
         break;
     }
-    
+    //s.close();
     return result;
-    
-    
-    
-    
-    
-    
   }
   
   public VerificationMenu() {
