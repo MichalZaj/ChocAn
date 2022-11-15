@@ -11,5 +11,10 @@ public class Date {
     day = d;
     year = y;
     }
+  public void setDate(int m, int d, int y) {
+    month = m;
+    day = d;
+    year = y;
+    }
       
   
