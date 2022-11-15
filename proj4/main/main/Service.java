@@ -6,7 +6,7 @@ public class Service {
   int providerNumber;
   int memberNumber;
   int serviceCode;
-  string comments;
+  String comments;
   
   public void setServiceDate(int m, int d, int y) { 
     dateOfService.setDate(m, d, y);
@@ -29,7 +29,7 @@ public class Service {
     }
     
     public int getProviderNumber() {
-        return provierNumber;
+        return providerNumber;
   }
     
    public void setMemberNumber(int n) {
