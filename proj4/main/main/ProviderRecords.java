@@ -19,22 +19,20 @@ public class ProviderRecords extends Records {
     validProvider = false;
   }
   
-  /** Finds provider. 
-
- * @throws Exception 
-  * If provider does not exist. */
+  public static List<Provider> getProviderRecords() {
+    return providerRecordsArray;
+  }
+  
+  /** Finds provider. */
   public static Provider getProvider(int[] number) {
     int[] providerNumber;
     int index = 0;
     while (index < providerRecordsArray.size()) {
-    	providerNumber = providerRecordsArray.get(index).getProviderNumber();
+      providerNumber = providerRecordsArray.get(index).getProNumber();
       if (providerNumber == number) {
-    	provider = providerRecordsArray.get(index);
+        provider = providerRecordsArray.get(index);
         validProvider = true;
       }
-    }
-    if (validProvider == false) {
-      throw new Exception("Invalid Provider");
     }
     return provider;
   }
@@ -47,20 +45,15 @@ public class ProviderRecords extends Records {
 
   /** Deletes provider. */
   public static void deleteProvider(Provider provider) {
-	  providerRecordsArray.remove(provider);
+    providerRecordsArray.remove(provider);
   }
   
   /** Adds provider. */
-  public void addProvider(int[] number) {
-	Provider newProvider = new Provider();
-    newProvider.addProvider(number);
+  public void addProvider(Provider providerToAdd) {
+    Provider newProvider = new Provider();
+    newProvider.addProvider(providerToAdd);
     providerRecordsArray.add(newProvider);
   }
-  
-  public static void main(String[] args) {
-    
-  }
-
   
 
 }

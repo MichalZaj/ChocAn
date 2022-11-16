@@ -13,10 +13,14 @@ public class MemberRecords extends Records {
   static Member member;
   Member newMember;
   
-  /** Constructor. */
+  /** Empty Constructor. */
   public MemberRecords() {
     List<Member> memberRecordsArray = new ArrayList<>();
     validMember = false;
+  }
+  
+  public static List<Member> getMemberRecords() {
+    return memberRecordsArray;
   }
   
   /** Finds member. */
@@ -50,10 +54,4 @@ public class MemberRecords extends Records {
     memberRecordsArray.add(newMember);
   }
   
-  public static void main(String[] args) {
-    
-  }
-
-  
-
 }

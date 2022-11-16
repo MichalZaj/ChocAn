@@ -33,12 +33,6 @@ public class Member extends MemberRecords {
   
   public void suspendMember(Member member) {
     member.suspendedMember = true;
-    
-  }
-  
-  /** Main method. */
-  public static void main(String[] args) {
-    
   }
 
 }
