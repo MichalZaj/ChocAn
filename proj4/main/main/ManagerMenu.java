@@ -2,37 +2,63 @@ package main.main;
 
 import java.util.Scanner;
 
+/** 
+ * Manager Menu contains all options for the manager and allows the manager to select them. 
+ *
+ * @author thoma
+ *  
+ */
+
 public class ManagerMenu {
 	
-	public ManagerMenu() {
-		
-	}
+  public ManagerMenu() {
+    
+  }
+  
+  /**
+   * Prompt is the option selection process. 
+   */
+  public void prompt() {
+    Scanner myScanner = new Scanner(System.in);
 	
-	public void prompt() {
-	    Scanner myScanner = new Scanner(System.in);
-	    
-	    while (true) {
-	        System.out.println("Operator Terminal Options: ");
-	        System.out.println("(P) - Update Provider Records");
-	        System.out.println("(O) - Update Operator Records");
-	        System.out.println("(Q) - Exit operator terminal");
-	      
-	        String input = myScanner.nextLine();
-	      
-	        switch (input) {
-	          case("P"):
-	            break;
-	        
-	        
-	          case("O"):
-	            break;
-	            
-	          default:
-	            System.out.println("Exiting operator terminal");
-	            return;
-	            
-	      
-	        }
-	    }
-	}
+    while (true) {
+      System.out.println("Manager Terminal Options: ");
+      System.out.println("(E) - Access EFT Report");
+      System.out.println("(P) - Access Provider Report");
+      System.out.println("(M) - Access Member Report");
+      System.out.println("(S) - Access Summary Report");
+      System.out.println("(Q) - Exit operator terminal");
+
+      String input = myScanner.nextLine();
+
+      switch (input) {
+        case("E"):
+        System.out.println("Printing EFT Report.");
+        ManagerController manController = new ManagerController();
+        manController.createEFTReport();
+        manController.printEFTReport();
+          break;
+
+        case("P"):
+        	System.out.println("Printing EFT Report.");
+          ManagerController manController = new ManagerController();
+          manController.createEFTReport();
+          manController.printEFTReport();
+          break;
+
+
+        case("M"):
+          break;
+
+        case("S"):
+          break;
+
+        default:
+          System.out.println("Exiting operator terminal");
+          return;
+
+
+      }
+    }
+  }
 }
