@@ -46,12 +46,11 @@ public class Term {
           break;
         case('M'):
           System.out.println("Entering Manager Terminal");
-        //ManagerMenu manMenu = new ManagerMenu(); 
-        //manMenu.prompt();
+          ManagerMenu manMenu = new ManagerMenu(); 
+          manMenu.prompt();
         case('T'):
-          
           System.out.println("Starting Main Accounting Procedure");
-        
+          
           break;
         default:
           System.out.println("Verification Failed");

@@ -1,20 +1,20 @@
 package main.main;
 
 /**
- * eft class.
+ * eft report class.
  *
  * @author mpzajac
  *
  */
 
-public class Eft {
+public class EftReport {
   /**
 
    * Default constructor.
 
    */
 
-  public Eft() {
+  public EftReport() {
 
   }
 }
