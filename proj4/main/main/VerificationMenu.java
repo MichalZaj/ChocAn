@@ -3,7 +3,8 @@ package main.main;
 import java.util.Scanner;
 
 /**
- * 
+ * This menu runs the verification process.
+
  * @author cjmes
  *
  */
@@ -18,6 +19,13 @@ public class VerificationMenu {
   
   int numOperators = 1;
   int[] validOperatorNums = new int[10];
+  
+  /**
+   * Prompts the verification menu.
+
+   * @return the desired menu to join and resultant permissions 
+   
+   */
   
   public char promptMenu() {
     Scanner s = new Scanner(System.in);
@@ -57,12 +65,23 @@ public class VerificationMenu {
     return result;
   }
   
+  /**
+   * Constructor.
+   */
   public VerificationMenu() {
     validProviderNums[0] = 123;
     validOperatorNums[0] = 123;
     validManagerNums[0] = 123;
   }
   
+  
+  /**
+   * Verifies provider.
+
+   * @param num given provider number
+
+   * @return fail or success
+   */
   public char verifyProvider(int num) {
     for (int i = 0; i < numProviders; i++) {
       if (num == validProviderNums[i]) {
@@ -72,6 +91,14 @@ public class VerificationMenu {
     return 'F';
   }
   
+  
+  /**
+   * Verifies operator.
+
+   * @param num given provider number
+
+   * @return fail or success
+   */
   public char verifyOperator(int num) {
     for (int i = 0; i < numOperators; i++) {
       if (num == validOperatorNums[i]) {
@@ -81,6 +108,13 @@ public class VerificationMenu {
     return 'F';
   }
   
+  /**
+   * Verifies manager.
+
+   * @param num given provider number
+
+   * @return fail or success
+   */
   public char verifyManager(int num) {
     for (int i = 0; i < numManagers; i++) {
       if (num == validManagerNums[i]) {
@@ -89,8 +123,4 @@ public class VerificationMenu {
     }
     return 'F';
   }
-  
-  
-  
-  
 }
