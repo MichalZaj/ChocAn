@@ -20,6 +20,7 @@ public class ManagerMenu {
    */
   public void prompt() {
     Scanner myScanner = new Scanner(System.in);
+    ManagerController manController = new ManagerController();
 	
     while (true) {
       System.out.println("Manager Terminal Options: ");
@@ -33,30 +34,32 @@ public class ManagerMenu {
 
       switch (input) {
         case("E"):
-        System.out.println("Printing EFT Report.");
-        ManagerController manController = new ManagerController();
-        manController.createEFTReport();
-        manController.printEFTReport();
+          System.out.println("Printing EFT Report.");
+          manController.createEftReport();
+          manController.printEftReport();
           break;
 
         case("P"):
-        	System.out.println("Printing EFT Report.");
-          ManagerController manController = new ManagerController();
-          manController.createEFTReport();
-          manController.printEFTReport();
+          System.out.println("Printing Provider Report.");
+          manController.createProviderReport();
+          manController.printProviderReport();
           break;
 
-
         case("M"):
+          System.out.println("Printing Member Report.");
+          manController.createMemberReport();
+          manController.printMemberReport();
           break;
 
         case("S"):
+          System.out.println("Printing Summary Report.");
+          manController.createSummaryReport();
+          manController.printSummaryReport();
           break;
 
         default:
           System.out.println("Exiting operator terminal");
           return;
-
 
       }
     }
