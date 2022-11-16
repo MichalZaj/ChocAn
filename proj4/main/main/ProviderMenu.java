@@ -1,16 +1,12 @@
 package main.main;
 
+import java.util.Scanner;
+
 /**
  * This is the provider menu class.
 
  * @author cjmes
- * 
- */
 
-import java.util.Scanner;
-
-/**
- * Provider menu constructor.
  */
 
 public class ProviderMenu {
@@ -33,7 +29,7 @@ public class ProviderMenu {
       System.out.println("(R) - Request Provider Directory");
       System.out.println("(S) - Search Provider Directory");
       System.out.println("(Q) - Exit menu");
-      String input = myScanner.nextLine();
+      String input = myScanner.next();
 
       switch (input) {
         case("B"):
@@ -48,12 +44,9 @@ public class ProviderMenu {
           int searchVal = myScanner.nextInt();
           provController.searchProviderDirectory(searchVal);
           break;
-          
         default:
           return;
-          
 
- 
       }
     }
   }
