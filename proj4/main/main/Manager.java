@@ -1,7 +1,8 @@
 package main.main;
 
 /**
- * 
+ * Manager class.
+ *
  * @author cjmes
  *
  */
