@@ -1,10 +1,11 @@
 package main.main;
 
 /**
- * 
- * @author cjmes
- *
- */
+* operator class.
+*
+* @author cjmess
+*
+*/
 public class Operator {
   //member variables
   int operatorNumber;
