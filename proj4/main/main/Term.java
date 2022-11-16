@@ -49,7 +49,16 @@ public class Term {
           manMenu.prompt();
         case('T'):
           System.out.println("Starting Main Accounting Procedure");
-          
+          /* ManagerController manControl = new ManagerController();
+           * manControl.createEftReport();
+           * manControl.printEftReport();
+           * manControl.createProviderReport(); 
+           * manControl.printProviderReport();
+           * manControl.createMemberReport();
+           * manControl.printMemberReport();
+           * manControl.createSummaryReport();
+           * manControl.printSummaryReport();
+           */
           break;
         default:
           System.out.println("Verification Failed");
