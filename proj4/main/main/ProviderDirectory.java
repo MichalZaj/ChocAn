@@ -62,13 +62,17 @@ public class ProviderDirectory {
    */
   
   public void searchDirectory(int num) {
+    boolean found = false;
     for (int i = 0; i < 10; i++) {
       if (num == serviceCode[i]) {
         System.out.println("Service Found : " + serviceDescriptions[i]);
-        return;
+        found = true;
       }
     }
-    return;
+    if (found != true) {
+      System.out.println("Service not found.");
+    }
+    System.out.println();
   }
   
   
