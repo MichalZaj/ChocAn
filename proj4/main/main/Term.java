@@ -8,7 +8,7 @@ import java.util.Scanner;
  *    This is the main file that runs the system
  */
 
-public class term {
+public class Term {
 	
 
 
@@ -45,6 +45,11 @@ public class term {
           break;
         case('M'):
           System.out.println("Entering Manager Terminal");
+        //ManagerMenu manMenu = new ManagerMenu(); 
+        //manMenu.prompt();
+        case('T'):
+          
+          System.out.println("Starting Main Accounting Procedure");
         
           break;
         default:
