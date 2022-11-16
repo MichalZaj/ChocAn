@@ -2,6 +2,12 @@ package main.main;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @author cjmes
+ *
+ */
+
 public class VerificationMenu {
   //member variables
   int numProviders = 1;

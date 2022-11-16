@@ -9,7 +9,7 @@ public class Records {
   String user;
   
   public Records() {
-    Records records = new Records()
+    Records records = new Records();
   }
   
   /** Accesses records to identify type of user. 

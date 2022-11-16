@@ -1,5 +1,11 @@
 package main.main;
 
+/**
+ * 
+ * @author cjmes
+ *
+ */
+
 public class Manager {
   int managerNumber;
   
