@@ -14,7 +14,8 @@ public class Term {
 
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
-    
+    ProviderMenu proMenu = new ProviderMenu();
+    OperatorMenu opMenu = new OperatorMenu();
     
     
     
@@ -35,12 +36,12 @@ public class Term {
       switch (verificationPassed) {
         case('P'):
           System.out.println("Entering Provider Terminal");
-          ProviderMenu proMenu = new ProviderMenu();
+          proMenu = new ProviderMenu();
           proMenu.prompt();
           break;
         case('O'):
           System.out.println("Entering Operator Terminal");
-          OperatorMenu opMenu = new OperatorMenu();
+          opMenu = new OperatorMenu();
           opMenu.prompt();
           break;
         case('M'):

@@ -1,7 +1,8 @@
 package main.main;
 
 /**
- * 
+ * Provider directory constructor. 
+
  * @author cjmes
  *
  */
@@ -11,18 +12,22 @@ public class ProviderDirectory {
   int[] serviceCode;
   String[] serviceDescriptions;
   
+  /**
+   * Constructor for provider directory.
+   */
+  
   public ProviderDirectory() {
     serviceCode = new int[10];
-    serviceCode[0] = 1001;
-    serviceCode[1] = 1002;
-    serviceCode[2] = 1003;
-    serviceCode[3] = 1004;
-    serviceCode[4] = 1005;
-    serviceCode[5] = 1006;
-    serviceCode[6] = 1007;
-    serviceCode[7] = 1008;
-    serviceCode[8] = 1009;
-    serviceCode[9] = 9999;
+    serviceCode[0] = 100001;
+    serviceCode[1] = 100002;
+    serviceCode[2] = 100003;
+    serviceCode[3] = 100004;
+    serviceCode[4] = 100005;
+    serviceCode[5] = 100006;
+    serviceCode[6] = 100007;
+    serviceCode[7] = 100008;
+    serviceCode[8] = 100009;
+    serviceCode[9] = 999999;
     
     serviceDescriptions = new String[10];
     serviceDescriptions[0] = "Chocolate Removal";
@@ -38,11 +43,38 @@ public class ProviderDirectory {
     
   }
   
+  /**
+   * Prints the provider directory.
+   */
+  
   public void printDirectory() {
     for (int i = 0; i < 10; i++) {
       System.out.print(serviceCode[i] + " - " + serviceDescriptions[i] + "\n");
     }
     System.out.println();
   }
+  
+  /**
+   * Searches the directory and prints out an entry if it is found.
+
+   * @param num
+    Given provider directory code
+   */
+  
+  public void searchDirectory(int num) {
+    boolean found = false;
+    for (int i = 0; i < 10; i++) {
+      if (num == serviceCode[i]) {
+        System.out.println("Service Found : " + serviceDescriptions[i]);
+        found = true;
+      }
+    }
+    if (found != true) {
+      System.out.println("Service not found.");
+    }
+    System.out.println();
+  }
+  
+  
   
 }
