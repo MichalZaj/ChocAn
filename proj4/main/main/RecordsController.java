@@ -98,12 +98,81 @@ public class RecordsController {
   }
   
   public void promptForProviderChanges() {
+    System.out.println("Would you like to\n(A) - Add\n(E) - Edit\n(R) - Remove\na provider?");
+    String input = myScanner.next();
     
+    switch (input) {
+      case("A"):
+        System.out.println("Adding new provider. Enter a name");
+        String name = myScanner.next();
+        Provider addition = new Provider(name);
+        providerRecordsArray.add(addition);
+        System.out.println("New provider added. Information is as follows:");
+        providerRecordsArray.get(providerRecordsArray.size() - 1).printProvider();
+        System.out.println();
+        break;
+        
+      case("E"):
+        System.out.println("Editing provider. Enter a member number");
+        int providerNum = myScanner.nextInt();
+        
+       
+        boolean providerExists = searchProvider(providerNum);
+        
+        if (providerExists) {
+          System.out.println("Provider found.");
+          System.out.println("(N) - Change name");
+          System.out.println("(C) - Cancel");
+          input = myScanner.next();
+          
+          switch (input) {
+            case("N"):
+              System.out.println("Enter a new name:");
+              String newName = myScanner.next();
+              changeProviderName(providerNum, newName);
+              break;
+              
+            default:
+              System.out.println("Invalid input. Existing to operator menu.");
+              break;
+              
+          }
+        } else {
+          System.out.println("Provider does not exist.");
+          System.out.println("Going back to Operator menu");
+          break;
+        }
+        break;
+      
+      case("R"):
+        System.out.println("Removing provider. Enter a provider number");
+        int delProviderNum = myScanner.nextInt();
+      
+        
+        
+        boolean delProviderExists = searchProvider(delProviderNum);
+        
+        
+        
+        if (delProviderExists) {
+          System.out.println("Deleting Provider");
+          deleteProvider(delProviderNum);
+        } else {
+          System.out.println("Provider not found");
+        }
+        break;
+        
+        
+      default:
+        System.out.println("Invalid option. Returning to operator menu.");
+        break;
+    }
   }
  
   public void addMember(String name) {
     Member addition = new Member(name);
     memberRecordsArray.add(addition);
+    System.out.println("Member successfully added");
     
   }
   
@@ -157,6 +226,7 @@ public class RecordsController {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
         memberRecordsArray.remove(i);
+        System.out.println("Member successfully deleted");
       }
     }
   }
@@ -177,6 +247,7 @@ public class RecordsController {
   public void addProvider(String name) {
     Provider addition = new Provider(name);
     providerRecordsArray.add(addition);
+    System.out.println("Provider successfully added");
   }
   
   public boolean searchProvider(int providerNumber) {
@@ -186,5 +257,26 @@ public class RecordsController {
       }
     }
     return false;
+  }
+
+
+
+  public void deleteProvider(int providerNumber) {
+    for (int i = 0; i < providerRecordsArray.size(); i++) {
+      if (providerRecordsArray.get(i).getProviderNumber() == providerNumber) {
+        providerRecordsArray.remove(i);
+        System.out.println("Provider successfully deleted");
+      }
+    } 
+  }
+  
+  public void changeProviderName(int providerNumber, String newName) {
+    for (int i = 0; i < providerRecordsArray.size(); i++) {
+      if (providerRecordsArray.get(i).getProviderNumber() == providerNumber) {
+        providerRecordsArray.get(i).setProviderName(newName);
+        System.out.print("New name: "); 
+        providerRecordsArray.get(i).printProvider();
+      }
+    }
   }
 }

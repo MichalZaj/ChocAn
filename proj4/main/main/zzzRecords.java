@@ -18,9 +18,9 @@ public class zzzRecords {
     zzzMemberRecords.memberRecordsArray = zzzMemberRecords.getMemberRecords();
     Member member = new Member();
     member = zzzMemberRecords.getMember(number);
-    ProviderRecords.providerRecordsArray = ProviderRecords.getProviderRecords();
+    zzzProviderRecords.providerRecordsArray = zzzProviderRecords.getProviderRecords();
     Provider provider = new Provider();
-    provider = ProviderRecords.getProvider(number);
+    provider = zzzProviderRecords.getProvider(number);
     if (member != null) {
       user = "member";
     } else if (provider != null) {
@@ -44,8 +44,8 @@ public class zzzRecords {
       zzzMemberRecords.deleteMember(member);
     } else if (user == "provider") {
       Provider provider = new Provider();
-      provider = ProviderRecords.getProvider(number);
-      ProviderRecords.deleteProvider(provider);
+      provider = zzzProviderRecords.getProvider(number);
+      zzzProviderRecords.deleteProvider(provider);
     }
   }
   
@@ -77,8 +77,8 @@ public class zzzRecords {
       memberRecords.addMember(member);
     } else if (user == "provider") {
       Provider provider = new Provider();
-      provider = ProviderRecords.getProvider(number);
-      ProviderRecords providerRecords = new ProviderRecords();
+      provider = zzzProviderRecords.getProvider(number);
+      zzzProviderRecords providerRecords = new zzzProviderRecords();
       providerRecords.addProvider(provider);
     }
   }

@@ -7,14 +7,14 @@ import java.util.List;
 
  * @author Cristina Paier */
 
-public class ProviderRecords extends zzzRecords {
+public class zzzProviderRecords extends zzzRecords {
   static List<Provider> providerRecordsArray;
   static boolean validProvider;
   static Provider provider;
   Provider newProvider;
   
   /** Constructor. */
-  public ProviderRecords() {
+  public zzzProviderRecords() {
     List<Provider> providerRecordsArray = new ArrayList<>();
     validProvider = false;
   }

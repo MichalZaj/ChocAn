@@ -1,5 +1,5 @@
 package main.main;
-public class Service {
+public class zzzService {
   //member variables
   Date dateOfService;
   Date dateOfRecording;

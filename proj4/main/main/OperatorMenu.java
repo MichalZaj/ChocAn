@@ -33,6 +33,7 @@ public class OperatorMenu {
       
       
         case("P"):
+          myController.promptForProviderChanges();
           break;
         
         case("Q"):
