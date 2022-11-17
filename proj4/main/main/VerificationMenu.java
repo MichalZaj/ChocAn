@@ -11,14 +11,14 @@ import java.util.Scanner;
 
 public class VerificationMenu {
   //member variables
-  int numProviders = 1;
-  int[] validProviderNums = new int[10];
   
   int numManagers = 1;
   int[] validManagerNums = new int[10];
   
   int numOperators = 1;
   int[] validOperatorNums = new int[10];
+  
+  RecordsController myController;
   
   /**
    * Prompts the verification menu.
@@ -29,20 +29,26 @@ public class VerificationMenu {
   
   public char promptMenu() {
     Scanner s = new Scanner(System.in);
-    System.out.println("Please select type of user:");
+    System.out.println("Please select verification type, or close system:");
     System.out.println("(P) - Provider");
     System.out.println("(O) - Operator");
     System.out.println("(M) - Manager");
+    System.out.println("(-) - Close System");
     
     String input = s.nextLine();
     int verificationNum;
+    boolean isValid;
     char result = 'F';
     switch (input) {
       case("P"):
         System.out.println("Verifying Provider Selected");
         System.out.println("Enter provider number: ");
         verificationNum = s.nextInt();
-        result = verifyProvider(verificationNum);
+        
+        isValid = myController.searchProvider(verificationNum);
+        if (isValid) {
+          result = 'P';
+        }
         break;
       case("O"):
         System.out.println("Verifying Operator Selected");
@@ -55,6 +61,10 @@ public class VerificationMenu {
         System.out.println("Enter manager number: ");
         verificationNum = s.nextInt();
         result = verifyManager(verificationNum);
+        break;
+      case("-"):
+        System.out.println("Closing system. Goodbye!");
+        System.exit(1);
         break;
 
       default:
@@ -69,27 +79,13 @@ public class VerificationMenu {
    * Constructor.
    */
   public VerificationMenu() {
-    validProviderNums[0] = 123;
-    validOperatorNums[0] = 123;
-    validManagerNums[0] = 123;
+    validOperatorNums[0] = 200200200;
+    validManagerNums[0] = 200200200;
+    myController = new RecordsController();
   }
   
-  
-  /**
-   * Verifies provider.
 
-   * @param num given provider number
-
-   * @return fail or success
-   */
-  public char verifyProvider(int num) {
-    for (int i = 0; i < numProviders; i++) {
-      if (num == validProviderNums[i]) {
-        return 'P';
-      }
-    }
-    return 'F';
-  }
+ 
   
   
   /**
@@ -106,6 +102,15 @@ public class VerificationMenu {
       }
     }
     return 'F';
+  }
+  
+  public boolean verifyMember(int num) {
+    boolean result = false;
+    boolean isValid = myController.searchMember(num);
+    if (isValid) {
+      result = true;
+    }
+    return result;
   }
   
   /**

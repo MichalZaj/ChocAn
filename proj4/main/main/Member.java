@@ -3,14 +3,14 @@ package main.main;
 import java.util.Random;
 
 /** Individual member. */
-public class aMember {
+public class Member {
   private String memberName;
   private int memberNumber;
   private boolean suspendedMember;
 
   /** Constructor. */
   
-  public aMember(String name) {
+  public Member(String name) {
     memberName = name;
     suspendedMember = false;
     Random rand = new Random();
@@ -22,8 +22,15 @@ public class aMember {
   }
   
   //Getters
+  
   public void printMember() {
     System.out.println("Name: " + memberName + "\nMember Number: " + memberNumber);
+    System.out.print("Status: ");
+    if (suspendedMember) {
+      System.out.println("Suspended");
+    } else {
+      System.out.println("NOT suspended");
+    }
   }
   
   /** Gets member number. */
@@ -35,7 +42,7 @@ public class aMember {
     return memberName;
   }
   
-  public boolean isSuspended(boolean status) {
+  public boolean isSuspended() {
     return suspendedMember;
   }
   

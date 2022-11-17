@@ -18,13 +18,17 @@ public class Term {
     Scanner s = new Scanner(System.in);
     ProviderMenu proMenu = new ProviderMenu();
     OperatorMenu opMenu = new OperatorMenu();
-    
-    
-    //This sets a member account for Trina Locklear, so she is able to access the whole system
-    //Her code is 200200200
     RecordsController myRecord = new RecordsController();
+    
+    //This sets a Member account for Trina Locklear, so she is able to access the whole system
+    //Her code is 200200200
     myRecord.addMember("Trina Locklear");
     RecordsController.memberRecordsArray.get(0).setMemberNumber(200200200);
+    
+    //This sets a Provider account for Trina Locklear, so she is able to access the whole system
+    //Her code is 200200200
+    myRecord.addProvider("Dr. Trina Locklear");
+    RecordsController.providerRecordsArray.get(0).setProviderNumber(200200200);
     
     
     
@@ -35,12 +39,7 @@ public class Term {
     String sentinelValue = "A";
     while (!sentinelValue.equals("Q")) {
       System.out.println("Welcome to Chocan System.");
-      System.out.println("Q to quit, any other value to move into verification step.");
-      sentinelValue = s.next();
-      if (sentinelValue.equals("Q")) {
-        System.out.println("Exiting system. Goodbye!");
-        break;
-      }
+
       
       
       char verificationPassed = myMenu.promptMenu();
@@ -60,8 +59,13 @@ public class Term {
           System.out.println("Entering Manager Terminal");
           ManagerMenu manMenu = new ManagerMenu(); 
           manMenu.prompt();
+          break;
         case('T'):
           System.out.println("Starting Main Accounting Procedure");
+          break;
+        case('-'):
+          System.out.println("Closing system. Goodbye!");
+          System.exit(1);
           break;
         default:
           System.out.println("Verification Failed");

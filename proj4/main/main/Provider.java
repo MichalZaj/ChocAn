@@ -2,30 +2,46 @@ package main.main;
 
 import java.util.Random;
 
+/** Individual Provider. */
 public class Provider {
-  //member variables
-  int[] providerNumber;
-  String providerName;
+  private String providerName;
+  private int providerNumber;
+
+  /** Constructor. */
   
-  public Provider() {
-    Provider provider = new Provider();
-    provider.providerName = null;
-    provider.providerNumber = new int[9];
+  public Provider(String name) {
+    providerName = name;
+    Random rand = new Random();
+    for (int i = 0; i < 9; i++) {
+      providerNumber = rand.nextInt(899999999) + 100000000;
+    }
+    
     
   }
   
-  public int[] getProNumber() {
+  //Getters
+  
+  public void printProvider() {
+    System.out.println("Name: " + providerName + "\nProvider Number: " + providerNumber);
+  }
+  
+  /** Gets Provider number. */
+  public int getProviderNumber() {
     return providerNumber;
   }
   
-  /** Adds provider. */
-  public static void addProvider(Provider providerToAdd) {
-    Provider newProvider = new Provider();
-    newProvider.providerName = providerToAdd.providerName;
-    Random rand = new Random();
-    for (int i = 0; i < 10; i++) {
-      newProvider.providerNumber[i] = rand.nextInt(9);
-    }
+  public String getProviderName() {
+    return providerName;
   }
   
+  //Setters
+  
+  public void setProviderNumber(int desiredNum) {
+    providerNumber = desiredNum;
+  }
+  
+  public void setProviderName(String name) {
+    providerName = name;
+  }
+
 }
