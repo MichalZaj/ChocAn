@@ -1,5 +1,7 @@
 package main.main;
 
+
+
 public class StaticVariableTest {
 	
   static int test[] = new int[5];

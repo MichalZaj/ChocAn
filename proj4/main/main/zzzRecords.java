@@ -3,11 +3,11 @@ package main.main;
 /** Class provides access to actions for all record types.
 
  * @author Cristina Paier */
-public class Records {
+public class zzzRecords {
   String user;
   
-  public Records() {
-    Records records = new Records();
+  public zzzRecords() {
+    zzzRecords records = new zzzRecords();
   }
   
   /** Accesses records to identify type of user. 
@@ -15,9 +15,9 @@ public class Records {
   * @throws Exception 
   When user isn't found. */
   public String accessRecords(int[] number) throws Exception {
-    MemberRecords.memberRecordsArray = MemberRecords.getMemberRecords();
+    zzzMemberRecords.memberRecordsArray = zzzMemberRecords.getMemberRecords();
     Member member = new Member();
-    member = MemberRecords.getMember(number);
+    member = zzzMemberRecords.getMember(number);
     ProviderRecords.providerRecordsArray = ProviderRecords.getProviderRecords();
     Provider provider = new Provider();
     provider = ProviderRecords.getProvider(number);
@@ -40,8 +40,8 @@ public class Records {
     }
     if (user == "member") {
       Member member = new Member();
-      member = MemberRecords.getMember(number);
-      MemberRecords.deleteMember(member);
+      member = zzzMemberRecords.getMember(number);
+      zzzMemberRecords.deleteMember(member);
     } else if (user == "provider") {
       Provider provider = new Provider();
       provider = ProviderRecords.getProvider(number);
@@ -58,8 +58,8 @@ public class Records {
     }
     if (user == "member") {
       Member member = new Member();
-      member = MemberRecords.getMember(number);
-      MemberRecords.editRecord(member);
+      member = zzzMemberRecords.getMember(number);
+      zzzMemberRecords.editRecord(member);
     }
   }
   
@@ -72,8 +72,8 @@ public class Records {
     }
     if (user == "member") {
       Member member = new Member();
-      member = MemberRecords.getMember(number);
-      MemberRecords memberRecords = new MemberRecords();
+      member = zzzMemberRecords.getMember(number);
+      zzzMemberRecords memberRecords = new zzzMemberRecords();
       memberRecords.addMember(member);
     } else if (user == "provider") {
       Provider provider = new Provider();

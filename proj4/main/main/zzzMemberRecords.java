@@ -7,14 +7,14 @@ import java.util.List;
 
  * @author Cristina Paier */
 
-public class MemberRecords extends Records {
+public class zzzMemberRecords extends zzzRecords {
   static List<Member> memberRecordsArray;
   static boolean validMember;
   static Member member;
   Member newMember;
   
   /** Empty Constructor. */
-  public MemberRecords() {
+  public zzzMemberRecords() {
     List<Member> memberRecordsArray = new ArrayList<>();
     validMember = false;
   }

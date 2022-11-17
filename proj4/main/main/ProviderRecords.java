@@ -7,7 +7,7 @@ import java.util.List;
 
  * @author Cristina Paier */
 
-public class ProviderRecords extends Records {
+public class ProviderRecords extends zzzRecords {
   static List<Provider> providerRecordsArray;
   static boolean validProvider;
   static Provider provider;
