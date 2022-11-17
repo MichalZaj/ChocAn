@@ -13,6 +13,13 @@ public class Term {
 
 
   public static void main(String[] args) {
+    
+	StaticVariableTest one = new StaticVariableTest();
+	StaticVariableTest two = new StaticVariableTest();
+	
+	two.adjust(220);
+	System.out.println(one.test[1]);
+	
     Scanner s = new Scanner(System.in);
     ProviderMenu proMenu = new ProviderMenu();
     OperatorMenu opMenu = new OperatorMenu();
