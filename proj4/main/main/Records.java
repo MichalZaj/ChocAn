@@ -4,8 +4,6 @@ package main.main;
 
  * @author Cristina Paier */
 public class Records {
-  Member member = null;
-  Provider provider = null;
   String user;
   
   public Records() {
@@ -13,18 +11,22 @@ public class Records {
   }
   
   /** Accesses records to identify type of user. 
- * @throws Exception */
+
+  * @throws Exception 
+  When user isn't found. */
   public String accessRecords(int[] number) throws Exception {
+    MemberRecords.memberRecordsArray = MemberRecords.getMemberRecords();
+    Member member = new Member();
     member = MemberRecords.getMember(number);
+    ProviderRecords.providerRecordsArray = ProviderRecords.getProviderRecords();
+    Provider provider = new Provider();
     provider = ProviderRecords.getProvider(number);
     if (member != null) {
       user = "member";
-    }
-    else if (provider != null) {
+    } else if (provider != null) {
       user = "provider";
-    }
-    else {
-    	throw new Exception("Invalid");
+    } else {
+      throw new Exception("Invalid");
     }
     return user;
   }
@@ -32,35 +34,53 @@ public class Records {
   /** Method to delete member record. */
   public void deleteRecord(int[] number) {
     try {
-		user = accessRecords(number);
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-    if (user == "member") {
-      MemberRecords.deleteMember(member);
+      user = accessRecords(number);
+    } catch (Exception e) {
+      e.printStackTrace();
     }
-    else if (provider != null) {
-      user = "provider";
-      }
-    MemberRecords.deleteMember(member);
+    if (user == "member") {
+      Member member = new Member();
+      member = MemberRecords.getMember(number);
+      MemberRecords.deleteMember(member);
+    } else if (user == "provider") {
+      Provider provider = new Provider();
+      provider = ProviderRecords.getProvider(number);
+      ProviderRecords.deleteProvider(provider);
+    }
   }
   
   /** Method to edit member record. */
   public void editRecord(int[] number) {
     try {
-      member = MemberRecords.getMember(number);
+      user = accessRecords(number);
     } catch (Exception e) {
       e.printStackTrace();
     }
-    MemberRecords.editRecord(member);
+    if (user == "member") {
+      Member member = new Member();
+      member = MemberRecords.getMember(number);
+      MemberRecords.editRecord(member);
+    }
   }
   
-  public void addRecord(Member member) {
-    MemberRecords.addMember(member);
-  }
-
-  public static void main(String[] args) {
-    
+  /** Adds a record. */
+  public void addRecord(int[] number) {
+    try {
+      user = accessRecords(number);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    if (user == "member") {
+      Member member = new Member();
+      member = MemberRecords.getMember(number);
+      MemberRecords memberRecords = new MemberRecords();
+      memberRecords.addMember(member);
+    } else if (user == "provider") {
+      Provider provider = new Provider();
+      provider = ProviderRecords.getProvider(number);
+      ProviderRecords providerRecords = new ProviderRecords();
+      providerRecords.addProvider(provider);
+    }
   }
 
 }

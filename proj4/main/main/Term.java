@@ -57,7 +57,6 @@ public class Term {
           manMenu.prompt();
         case('T'):
           System.out.println("Starting Main Accounting Procedure");
-          
           break;
         default:
           System.out.println("Verification Failed");
