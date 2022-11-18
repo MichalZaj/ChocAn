@@ -39,7 +39,7 @@ public class zzzMemberRecords extends zzzRecords {
   
   /** Suspends member. */
   public static void editRecord(Member member) {
-    member.suspendMember(member);
+    member.setSuspendedStatus(member);
   }
 
   /** Deletes member. */

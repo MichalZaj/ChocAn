@@ -3,7 +3,7 @@ package main.main;
 /**
  * Manager Controller creates and prints the manager's (and timer's) reports. 
  *
- * @author thoma
+ * @author thomas Roden
  *
  */
 

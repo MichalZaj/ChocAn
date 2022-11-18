@@ -1,19 +1,27 @@
 package main.main;
 
+import java.util.Scanner;
+
 /**
- * 
+ * This class runs operator menu options.
+
  * @author cjmes
- * 
  */
 
-import java.util.Scanner;
 
 public class OperatorMenu {
   RecordsController myController = new RecordsController();
+  
+  /**
+   * Constructor for operator menu. Allows access to operator menu methods.
+   */
   public OperatorMenu() {
 
   }
   
+  /**
+   * This is the main prompt the runs all menu options.
+   */
   public void prompt() {
     Scanner myScanner = new Scanner(System.in);
     
@@ -42,6 +50,7 @@ public class OperatorMenu {
           
         case("-"):
           System.out.println("Closing system. Goodbye!");
+          myScanner.close();
           System.exit(0);
           break;
         

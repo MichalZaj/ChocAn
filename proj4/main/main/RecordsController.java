@@ -198,7 +198,7 @@ public class RecordsController {
   public void suspendMember(int memberNumber) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
-        memberRecordsArray.get(i).suspendMember(true);
+        memberRecordsArray.get(i).setSuspendedStatus(true);
         System.out.println("Member suspended."); 
       }
     }
@@ -207,7 +207,7 @@ public class RecordsController {
   public void unSuspendMember(int memberNumber) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
-        memberRecordsArray.get(i).suspendMember(false);
+        memberRecordsArray.get(i).setSuspendedStatus(false);
         System.out.println("Member unsuspended."); 
       }
     }

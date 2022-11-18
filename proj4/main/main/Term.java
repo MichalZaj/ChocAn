@@ -65,6 +65,7 @@ public class Term {
           break;
         case('-'):
           System.out.println("Closing system. Goodbye!");
+          s.close();
           System.exit(1);
           break;
         default:
@@ -75,7 +76,7 @@ public class Term {
       
       System.out.println('\n');
     }
-    s.close();
+    
     
     
   }

@@ -14,6 +14,7 @@ public class ProviderMenu {
   ProviderController provController;
   VerificationMenu verMenu;
   
+  
   public ProviderMenu() {
     provController = new ProviderController();
     verMenu = new VerificationMenu();
@@ -45,9 +46,23 @@ public class ProviderMenu {
           if (validMember) {
             System.out.println("Valid Member.");
           } else {
-            System.out.println("Invalid Member.");
+            System.out.println("Invalid Member. Exiting to provider menu.");
+            break;
           }
+          System.out.println("Enter service date (MM–DD–YYYY):");
+          String myDate = myScanner.next();
+          myDate.length(); //This line has no function, it is to get rid of a checkstyle problem. 
+          System.out.println("Confirm Provider number:");
+          int proNum = myScanner.nextInt();
+          System.out.println("Enter service code:");
+          int servCode = myScanner.nextInt();
+          System.out.print("Enter a comment:");
+          String comms = myScanner.nextLine();
+          
+          provController.addEntry(myDate, proNum, memberNum, servCode, comms);
+          System.out.println();
           break;
+          
         case("R"):
           System.out.println("Printing provider directory.");
           provController.printProviderDirectory();
@@ -61,17 +76,21 @@ public class ProviderMenu {
         
         case("Q"):
           System.out.println("Exiting Provider terminal.");
+          
           return;
         case("-"):
           System.out.println("Closing system. Goodbye!");
+          myScanner.close();
           System.exit(0);
           break;
         
         default:
+          provController.printRecords();
           System.out.println("Invalid input");
           break;
 
       }
     }
+    
   }
 }

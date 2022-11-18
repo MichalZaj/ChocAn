@@ -2,7 +2,12 @@ package main.main;
 
 import java.util.Random;
 
-/** Individual member. */
+/**
+ * This class provides a template for Members.
+
+ * @author cjmes
+ *
+ */
 public class Member {
   private String memberName;
   private int memberNumber;
@@ -23,6 +28,10 @@ public class Member {
   
   //Getters
   
+  /**
+   * Prints member info.
+   */
+  
   public void printMember() {
     System.out.println("Name: " + memberName + "\nMember Number: " + memberNumber);
     System.out.print("Status: ");
@@ -33,28 +42,57 @@ public class Member {
     }
   }
   
-  /** Gets member number. */
+  /** 
+   * This function returns the member number.
+
+   * @return Returns the member number
+   */
   public int getMemberNumber() {
     return memberNumber;
   }
   
+  /**
+   * This function returns the member name.
+
+   * @return returns the member name
+   */
   public String getMemberName() {
     return memberName;
   }
   
+  
+  /**
+   * This function returns true if the member is suspended, false if not.
+
+   * @return true for suspended, false for unsuspended
+   */
   public boolean isSuspended() {
     return suspendedMember;
   }
   
-  //Setters
-  public void suspendMember(boolean desiredState) {
+  /**
+   * This function suspends a member by setting their suspended status to true.
+
+   * @param desiredState reflects what the desired state is.
+   */
+  public void setSuspendedStatus(boolean desiredState) {
     suspendedMember = desiredState;
   }
   
+  /**
+   * This function sets member number to desired Num.
+
+   * @param desiredNum is the desired number. 
+   */
   public void setMemberNumber(int desiredNum) {
     memberNumber = desiredNum;
   }
   
+  /**
+   * This function sets member name to name.
+
+   * @param name the name the members name will be set to.
+   */
   public void setMemberName(String name) {
     memberName = name;
   }

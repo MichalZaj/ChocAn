@@ -1,7 +1,7 @@
 package main.main;
 
 /**
- * eft report class.
+ * EFT report class.
  *
  * @author mpzajac
  *

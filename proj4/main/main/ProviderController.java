@@ -8,6 +8,9 @@ package main.main;
  */
 
 public class ProviderController {
+
+  WeeklyServiceRecord serviceRecord = new WeeklyServiceRecord();
+ 
   public ProviderController() {
     
   }
@@ -26,5 +29,15 @@ public class ProviderController {
     ProviderDirectory provDirectory = new ProviderDirectory();
     provDirectory.searchDirectory(num);
   }
+  
+  public void addEntry(String srvDte, Integer prvNum, Integer memNum, Integer srvCde, String coms) {
+    serviceRecord.addArray(srvDte, prvNum, memNum, srvCde, coms);
+  }
+  
+  public void printRecords() {
+    serviceRecord.print();
+  }
+  
+  
   
 }

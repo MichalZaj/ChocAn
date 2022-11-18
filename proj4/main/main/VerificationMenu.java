@@ -64,6 +64,7 @@ public class VerificationMenu {
         break;
       case("-"):
         System.out.println("Closing system. Goodbye!");
+        s.close();
         System.exit(1);
         break;
 
@@ -71,7 +72,7 @@ public class VerificationMenu {
         System.out.println("Invalid input");
         break;
     }
-    //s.close();
+    
     return result;
   }
   

@@ -21,7 +21,7 @@ public class ManagerMenu {
   public void prompt() {
     Scanner myScanner = new Scanner(System.in);
     ManagerController manController = new ManagerController();
-	
+
     while (true) {
       System.out.println("Manager Terminal Options: ");
       System.out.println("(E) - Access EFT Report");
@@ -59,9 +59,11 @@ public class ManagerMenu {
 
         default:
           System.out.println("Exiting operator terminal");
+          myScanner.close();
           return;
 
       }
     }
+    
   }
 }
