@@ -15,6 +15,9 @@ public class ProviderMenu {
   VerificationMenu verMenu;
   
   
+  /**
+   * Provider menu prompt.
+   */
   public ProviderMenu() {
     provController = new ProviderController();
     verMenu = new VerificationMenu();
@@ -55,11 +58,13 @@ public class ProviderMenu {
           System.out.println("Confirm Provider number:");
           int proNum = myScanner.nextInt();
           System.out.println("Enter service code:");
+          int myNum = proNum;
           int servCode = myScanner.nextInt();
           System.out.print("Enter a comment:");
+          myScanner.nextLine();
           String comms = myScanner.nextLine();
           
-          provController.addEntry(myDate, proNum, memberNum, servCode, comms);
+          provController.addEntry(myDate, myNum, memberNum, servCode, comms);
           System.out.println();
           break;
           
@@ -85,7 +90,7 @@ public class ProviderMenu {
           break;
         
         default:
-          provController.printRecords();
+          
           System.out.println("Invalid input");
           break;
 

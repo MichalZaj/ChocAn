@@ -22,7 +22,30 @@ public class RecordsController {
       case("A"):
         System.out.println("Adding new member. Enter a name");
         String name = myScanner.next();
-        Member addition = new Member(name);
+        name.length();
+        
+        System.out.print("Enter a street address: ");
+        myScanner.nextLine();
+        String address = myScanner.nextLine();
+        System.out.println();
+        address.length();
+        
+        System.out.print("Enter a city: ");
+        //myScanner.nextLine();
+        String city = myScanner.nextLine();
+        System.out.println();
+        city.length();
+        
+        System.out.print("Enter a state: ");
+        String state = myScanner.nextLine();
+        System.out.println();
+        state.length();
+        
+        System.out.print("Enter a zip: ");
+        String zip = myScanner.next();
+        System.out.println();
+        
+        Member addition = new Member(name, address, city, state, zip);
         memberRecordsArray.add(addition);
         System.out.println("New member added. Information is as follows:");
         memberRecordsArray.get(memberRecordsArray.size() - 1).printMember();
@@ -97,6 +120,9 @@ public class RecordsController {
     }
   }
   
+  /**
+   * Manages provider changes.
+   */
   public void promptForProviderChanges() {
     System.out.println("Would you like to\n(A) - Add\n(E) - Edit\n(R) - Remove\na provider?");
     String input = myScanner.next();
@@ -105,7 +131,31 @@ public class RecordsController {
       case("A"):
         System.out.println("Adding new provider. Enter a name");
         String name = myScanner.next();
-        Provider addition = new Provider(name);
+        name.length();
+        
+        System.out.print("Enter a street address: ");
+        myScanner.nextLine();
+        String address = myScanner.nextLine();
+        System.out.println();
+        address.length();
+        
+        System.out.print("Enter a city: ");
+        //myScanner.nextLine();
+        String city = myScanner.nextLine();
+        System.out.println();
+        city.length();
+        
+        System.out.print("Enter a state: ");
+        //myScanner.nextLine();
+        String state = myScanner.nextLine();
+        System.out.println();
+        state.length();
+        
+        System.out.print("Enter a zip: ");
+        String zip = myScanner.next();
+        System.out.println();
+        
+        Provider addition = new Provider(name, address, city, state, zip);
         providerRecordsArray.add(addition);
         System.out.println("New provider added. Information is as follows:");
         providerRecordsArray.get(providerRecordsArray.size() - 1).printProvider();
@@ -170,7 +220,7 @@ public class RecordsController {
   }
  
   public void addMember(String name) {
-    Member addition = new Member(name);
+    Member addition = new Member(name, "1600 Penn. Ave.", "Tuscaloosa", "AL", "63049");
     memberRecordsArray.add(addition);
     System.out.println("Member successfully added");
     
@@ -245,11 +295,11 @@ public class RecordsController {
   
   
   public void addProvider(String name) {
-    Provider addition = new Provider(name);
+    Provider addition = new Provider(name, "1600 Penn. Ave.", "Tuscaloosa", "AL", "63049");
     providerRecordsArray.add(addition);
     System.out.println("Provider successfully added");
   }
-  
+ 
   public boolean searchProvider(int providerNumber) {
     for (int i = 0; i < providerRecordsArray.size(); i++) {
       if (providerRecordsArray.get(i).getProviderNumber() == providerNumber) {

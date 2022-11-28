@@ -10,12 +10,17 @@ import java.util.Random;
  */
 public class Member {
   private String memberName;
-  private int memberNumber;
+  public int memberNumber;
   private boolean suspendedMember;
+  
+  public String streetAddress;
+  public String city;
+  public String state;
+  public String zip;
 
   /** Constructor. */
   
-  public Member(String name) {
+  public Member(String name, String address, String acity, String astate, String azip) {
     memberName = name;
     suspendedMember = false;
     Random rand = new Random();
@@ -23,6 +28,10 @@ public class Member {
       memberNumber = rand.nextInt(899999999) + 100000000;
     }
     
+    streetAddress = address;
+    city = acity;
+    state = astate;
+    zip = azip;
     
   }
   
@@ -40,6 +49,7 @@ public class Member {
     } else {
       System.out.println("NOT suspended");
     }
+    System.out.println(streetAddress + "\n" + city + ", " + state + " " + zip);
   }
   
   /** 

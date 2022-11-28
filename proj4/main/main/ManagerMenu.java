@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 
 public class ManagerMenu {
-	
+
   public ManagerMenu() {
     
   }
@@ -29,6 +29,7 @@ public class ManagerMenu {
       System.out.println("(M) - Access Member Report");
       System.out.println("(S) - Access Summary Report");
       System.out.println("(Q) - Exit operator terminal");
+      System.out.println("(-) - Exit system");
 
       String input = myScanner.nextLine();
 
@@ -56,11 +57,20 @@ public class ManagerMenu {
           manController.createSummaryReport();
           manController.printSummaryReport();
           break;
-
-        default:
-          System.out.println("Exiting operator terminal");
-          myScanner.close();
+          
+        case("Q"):
+          System.out.println("Exiting manager terminal");
           return;
+
+        case("-"):
+          System.out.println("Closing system. Goodbye!");
+          myScanner.close();
+          System.exit(0);
+          break;
+          
+        default:
+          System.out.println("Invalid Input");
+          break;
 
       }
     }

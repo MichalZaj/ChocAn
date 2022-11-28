@@ -6,23 +6,35 @@ import java.util.Random;
 public class Provider {
   private String providerName;
   private int providerNumber;
+  
+  public String streetAddress;
+  public String city;
+  public String state;
+  public String zip;
 
   /** Constructor. */
   
-  public Provider(String name) {
+  public Provider(String name, String address, String acity, String astate, String azip) {
     providerName = name;
     Random rand = new Random();
     for (int i = 0; i < 9; i++) {
       providerNumber = rand.nextInt(899999999) + 100000000;
     }
-    
+    streetAddress = address;
+    city = acity;
+    state = astate;
+    zip = azip;
     
   }
   
-  //Getters
+  /**
+   * prints provider.
+   */
   
   public void printProvider() {
     System.out.println("Name: " + providerName + "\nProvider Number: " + providerNumber);
+    System.out.println(streetAddress + "\n" + city + ", " + state + " " + zip);
+    
   }
   
   /** Gets Provider number. */
