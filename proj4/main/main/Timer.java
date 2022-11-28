@@ -28,10 +28,10 @@ public class Timer {
       int currNum = WeeklyServiceRecord.serviceRecordsArray.get(i).memberNumber;
       int reportIndex = theReports.doesMemReportExist(currNum);
       
-      //
-      if (reportIndex == -1) {
+      
+      if (reportIndex == -1) {//if The report does not yet exist, add a new one to the end
         
-      } else {
+      } else { //if it does exist, we are simply going to add a service
         
       }
     }
