@@ -8,29 +8,18 @@ package main.main;
  */
 
 public class ManagerController {
-	
+
+  Reports myReports;
+  Timer myTimer;
+
   public ManagerController() {
-
+    myReports = new Reports();
+    myTimer = new Timer();
   }
-	
-  public void createEftReport() {
 
-  }
-    
-  public void createProviderReport() {
-
-  }
-    
-  public void createMemberReport() {
-
-  }
-    
-  public void createSummaryReport() {
-
-  }
-	
   public void printEftReport() {
-
+    myTimer.runMainAccountingProcedure();
+    Reports.theEftReport.printReport();
   }
     
   public void printProviderReport() {
@@ -42,6 +31,7 @@ public class ManagerController {
   }
     
   public void printSummaryReport() {
-
+    myTimer.runMainAccountingProcedure();
+    Reports.theSummaryReport.print();
   }
 }

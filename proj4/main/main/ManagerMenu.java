@@ -23,6 +23,7 @@ public class ManagerMenu {
     ManagerController manController = new ManagerController();
 
     while (true) {
+      
       System.out.println("Manager Terminal Options: ");
       System.out.println("(E) - Access EFT Report");
       System.out.println("(P) - Access Provider Report");
@@ -35,26 +36,22 @@ public class ManagerMenu {
 
       switch (input) {
         case("E"):
-          System.out.println("Printing EFT Report.");
-          manController.createEftReport();
+          System.out.println("Generating EFT Report.");
           manController.printEftReport();
           break;
 
         case("P"):
-          System.out.println("Printing Provider Report.");
-          manController.createProviderReport();
+          System.out.println("Generating Provider Report.");
           manController.printProviderReport();
           break;
 
         case("M"):
-          System.out.println("Printing Member Report.");
-          manController.createMemberReport();
+          System.out.println("Generating Member Report.");
           manController.printMemberReport();
           break;
 
         case("S"):
-          System.out.println("Printing Summary Report.");
-          manController.createSummaryReport();
+          System.out.println("Generating Summary Report.");
           manController.printSummaryReport();
           break;
           

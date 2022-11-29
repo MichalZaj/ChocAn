@@ -1,7 +1,5 @@
 package main.main;
 
-import java.time.LocalDate;
-import java.time.Month;
 
 /**
  * This class will create reports.
@@ -28,7 +26,7 @@ public class Timer {
 
     
   
-    System.out.println("Running main accounting procedure.");
+    
     theReports.clearReports();
     //--MEMBER REPORTS----------------------------------------------------------------
     for (int i = 0; i < WeeklyServiceRecord.serviceRecordsArray.size(); i++) {
