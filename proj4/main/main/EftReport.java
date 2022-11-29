@@ -1,0 +1,48 @@
+package main.main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * EFT report class.
+ *
+ * @author mpzajac
+ *
+ */
+
+public class EftReport {
+  public List<String> providerArray;
+  public List<Double> feeArray;
+  
+  
+  /**
+
+   * Default constructor.
+
+   */
+
+  public EftReport() {
+    providerArray = new ArrayList<String>();
+    feeArray = new ArrayList<Double>();
+  }
+  
+  public void populateReport() {
+    for (int i = 0; i < Reports.providerReportsArray.size(); i++) {
+      providerArray.add(Reports.providerReportsArray.get(i).theProvider.getProviderName());
+      feeArray.add(Reports.providerReportsArray.get(i).getFee());
+    }
+  }
+  
+  public void printReport() {
+    System.out.println("===EFT Report===");
+    System.out.println("Provider Name | Fee due");
+    for (int i = 0; i < providerArray.size(); i++) {
+      System.out.println(providerArray.get(i) + " | $" + feeArray.get(i));
+    }
+  }
+  
+  public void clear() {
+    providerArray.clear();
+    feeArray.clear();
+  }
+}

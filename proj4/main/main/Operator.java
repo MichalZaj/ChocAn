@@ -10,10 +10,20 @@ public class Operator {
   //member variables
   int operatorNumber;
 
+  /**
+   * This is the class constructor.
+
+   * @param opNum desired operator number.
+   */
   public Operator(int opNum) {
     operatorNumber = opNum;
   }
   
+  /**
+   * This returns the operator's number.
+
+   * @return operators number.
+   */
   public int getOpNumber() {
     return operatorNumber;
   }

@@ -1,21 +1,59 @@
 package main.main;
 
-/**
- * 
- * @author cjmes
- *
- */
+import java.util.Random;
 
+/** Individual Provider. */
 public class Provider {
-  //member variables
-  int providerNumber;
+  private String providerName;
+  public int providerNumber;
   
-  public Provider(int provNum) {
-    providerNumber = provNum;
+  public String streetAddress;
+  public String city;
+  public String state;
+  public String zip;
+
+  /** Constructor. */
+  
+  public Provider(String name, String address, String acity, String astate, String azip) {
+    providerName = name;
+    Random rand = new Random();
+    for (int i = 0; i < 9; i++) {
+      providerNumber = rand.nextInt(899999999) + 100000000;
+    }
+    streetAddress = address;
+    city = acity;
+    state = astate;
+    zip = azip;
+    
   }
   
-  public int getProNumber() {
+  /**
+   * prints provider.
+   */
+  
+  public void printProvider() {
+    System.out.println("Name: " + providerName + "\nProvider Number: " + providerNumber);
+    System.out.println(streetAddress + "\n" + city + ", " + state + " " + zip);
+    
+  }
+  
+  /** Gets Provider number. */
+  public int getProviderNumber() {
     return providerNumber;
   }
   
+  public String getProviderName() {
+    return providerName;
+  }
+  
+  //Setters
+  
+  public void setProviderNumber(int desiredNum) {
+    providerNumber = desiredNum;
+  }
+  
+  public void setProviderName(String name) {
+    providerName = name;
+  }
+
 }

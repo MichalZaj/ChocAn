@@ -1,16 +1,35 @@
 package main.main;
+
+ 
+import java.util.ArrayList;
+
+import java.util.List;
+
+
 public class WeeklyServiceRecord {
-  //member variables
-  Service* servicesProvided; //im not sure how we can know the size needed for servicesProvided so using a pointer
   
- public WeeklyServiceRecord() { // this is something I found online
-     servicesProvided = new servicesProvided[2]
-     }
-     
- public WeeklyServiceRecord(int size) { // this is something I found online
-     servicesProvided = new servicesProvided[size]
-     }
-  public SetSize(int size) { 
-   servicesProvided = new servicesProvided[size]
-   }
-   }
+  static List<Service> serviceRecordsArray = new ArrayList<Service>();
+  
+  WeeklyServiceRecord() {
+    
+  }
+  
+  public void addArray(String srvDte, Integer prvNum, Integer memNum, Integer srvCde, String coms) {
+    Service addition = new Service(srvDte, prvNum, memNum, srvCde, coms);
+    serviceRecordsArray.add(addition);
+    System.out.println("Successfully added!");
+    
+  }
+  
+  public void print() {
+    for (int i = 0; i < serviceRecordsArray.size(); i++) {
+      serviceRecordsArray.get(i).printService();
+    }
+  }
+  
+  
+  
+  
+  
+  
+}
