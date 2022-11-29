@@ -4,16 +4,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * This class controls access to records.
+
+ * @author cpaier
+ *
+ */
 
 public class RecordsController {
   static List<Member> memberRecordsArray = new ArrayList<Member>();
   static List<Provider> providerRecordsArray = new ArrayList<Provider>();
   Scanner myScanner = new Scanner(System.in);
   
+  /**
+   * Constructor.
+   */
   public RecordsController() {
 
   }
   
+  /**
+   * Handles changes to member records.
+   */
   public void promptForMemberChanges() {
     System.out.println("Would you like to\n(A) - Add\n(E) - Edit\n(R) - Remove\na member?");
     String input = myScanner.next();
@@ -219,6 +231,12 @@ public class RecordsController {
     }
   }
  
+  /**
+   * Adds member and prints confirmation.
+
+   * @param name
+   * 
+   */
   public void addMember(String name) {
     Member addition = new Member(name, "1600 Penn. Ave.", "Tuscaloosa", "AL", "63049");
     memberRecordsArray.add(addition);
@@ -226,6 +244,13 @@ public class RecordsController {
     
   }
   
+  /**
+   * searches for member.
+
+   * @param memberNumber
+   * 
+   * @return boolean
+   */
   public boolean searchMember(int memberNumber) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
@@ -235,6 +260,14 @@ public class RecordsController {
     return false;
   }
   
+  /**
+   * Changes member name.
+
+   * @param memberNumber
+   * 
+   * @param newName
+   * 
+   */
   public void changeMemberName(int memberNumber, String newName) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
@@ -245,6 +278,12 @@ public class RecordsController {
     }
   }
   
+  /**
+   * Suspends member.
+
+   * @param memberNumber
+   * 
+   */
   public void suspendMember(int memberNumber) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
@@ -254,6 +293,12 @@ public class RecordsController {
     }
   }
   
+  /**
+   * Unsuspends member.
+
+   * @param memberNumber
+   * 
+   */
   public void unSuspendMember(int memberNumber) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
@@ -263,6 +308,13 @@ public class RecordsController {
     }
   }
   
+  /**
+   * Checks if member is suspended.
+
+   * @param memberNumber
+   * 
+   * @return boolean
+   */
   public boolean checkSuspended(int memberNumber) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
@@ -272,6 +324,12 @@ public class RecordsController {
     return false;
   }
   
+  /**
+   * Deletes member.
+
+   * @param memberNumber
+   * 
+   */
   public void deleteMember(int memberNumber) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNumber) {
@@ -281,6 +339,9 @@ public class RecordsController {
     }
   }
   
+  /**
+   * Prints member list.
+   */
   public void printMemberList() {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       memberRecordsArray.get(i).printMember();
@@ -288,7 +349,13 @@ public class RecordsController {
     }
   }
   
-  
+  /**
+   * Gets member name.
+
+   * @param memberNum
+   * 
+   * @return member name
+   */
   public String getMemName(int memberNum) {
     for (int i = 0; i < memberRecordsArray.size(); i++) {
       if (memberRecordsArray.get(i).getMemberNumber() == memberNum) {
@@ -298,7 +365,13 @@ public class RecordsController {
     return "Error Records controller line 298";
   }
   
-  
+  /**
+   * Gets provider name.
+
+   * @param provNum
+   * 
+   * @return Provider name
+   */
   public String getProvName(int provNum) {
     for (int i = 0; i < providerRecordsArray.size(); i++) {
       if (providerRecordsArray.get(i).getProviderNumber() == provNum) {
@@ -308,14 +381,25 @@ public class RecordsController {
     return "Error Records controller line 308";
   }
   
-  
-  
+  /**
+   * Adds Provider.
+
+   * @param name
+   * 
+   */
   public void addProvider(String name) {
     Provider addition = new Provider(name, "1600 Penn. Ave.", "Tuscaloosa", "AL", "63049");
     providerRecordsArray.add(addition);
     System.out.println("Provider successfully added");
   }
  
+  /**
+   * Searches for provider.
+
+   * @param providerNumber
+   * 
+   * @return boolean
+   */
   public boolean searchProvider(int providerNumber) {
     for (int i = 0; i < providerRecordsArray.size(); i++) {
       if (providerRecordsArray.get(i).getProviderNumber() == providerNumber) {
@@ -325,8 +409,12 @@ public class RecordsController {
     return false;
   }
 
+  /**
+   * Deletes Provider.
 
-
+   * @param providerNumber
+   * 
+   */
   public void deleteProvider(int providerNumber) {
     for (int i = 0; i < providerRecordsArray.size(); i++) {
       if (providerRecordsArray.get(i).getProviderNumber() == providerNumber) {
@@ -336,6 +424,14 @@ public class RecordsController {
     } 
   }
   
+  /**
+   * Changes provider name.
+
+   * @param providerNumber
+   * 
+   * @param newName
+   * 
+   */
   public void changeProviderName(int providerNumber, String newName) {
     for (int i = 0; i < providerRecordsArray.size(); i++) {
       if (providerRecordsArray.get(i).getProviderNumber() == providerNumber) {
