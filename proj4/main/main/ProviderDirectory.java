@@ -16,7 +16,6 @@ public class ProviderDirectory {
   /**
    * Constructor for provider directory.
    */
-  
   public ProviderDirectory() {
     serviceCode = new int[10];
     serviceCode[0] = 100001;
@@ -59,7 +58,6 @@ public class ProviderDirectory {
   /**
    * Prints the provider directory.
    */
-  
   public void printDirectory() {
     for (int i = 0; i < 10; i++) {
       System.out.print(serviceCode[i] + " - " + serviceDescriptions[i] + "[$" + prices[i] + "]\n");
@@ -73,7 +71,6 @@ public class ProviderDirectory {
    * @param num
     Given provider directory code
    */
-  
   public void searchDirectory(int num) {
     boolean found = false;
     for (int i = 0; i < 10; i++) {
@@ -88,6 +85,13 @@ public class ProviderDirectory {
     System.out.println();
   }
   
+  /**
+   * Gets Service name given service code.
+
+   * @param num
+   * 
+   * @return serviceDescriptions
+   */
   public String getServiceName(int num) {
     for (int i = 0; i < 10; i++) {
       if (num == serviceCode[i]) {
@@ -97,6 +101,13 @@ public class ProviderDirectory {
     return "Error state - Prov Directory line 95";
   }
   
+  /**
+   * Gets service price given the service code.
+
+   * @param num
+   * 
+   * @return prices
+   */
   public double getServicePrice(int num) {
     for (int i = 0; i < 10; i++) {
       if (num == serviceCode[i]) {
@@ -106,6 +117,13 @@ public class ProviderDirectory {
     return 0.00;
   }
   
+  /**
+   * Finds if service exists given code.
+
+   * @param num
+   * 
+   * @return boolean
+   */
   public boolean findService(int num) {
     boolean found = false;
     for (int i = 0; i < 10; i++) {
@@ -115,9 +133,5 @@ public class ProviderDirectory {
       }
     }
     return found;
-    
   }
-  
-  
-  
 }

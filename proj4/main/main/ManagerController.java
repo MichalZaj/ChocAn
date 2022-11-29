@@ -3,7 +3,7 @@ package main.main;
 /**
  * Manager Controller creates and prints the manager's (and timer's) reports. 
  *
- * @author thomas Roden
+ * @author Thomas Roden
  *
  */
 
@@ -22,15 +22,17 @@ public class ManagerController {
     myRecords = new RecordsController();
   }
 
+  /**
+   * Prints EFT Report.
+   */
   public void printEftReport() {
     myTimer.runMainAccountingProcedure();
     Reports.theEftReport.printReport();
   }
-    
-  public void printProviderReport() {
-
-  }
-    
+  
+  /**
+   *Prints Member Report.
+   */
   public boolean printMemberReport(int memNum) {
     myTimer.runMainAccountingProcedure();
     boolean memExists = myRecords.searchMember(memNum);
@@ -42,6 +44,9 @@ public class ManagerController {
     }
   }
 
+  /**
+   * Prints Provider Report.
+   */
   public boolean printProviderReport(int provNum) {
     myTimer.runMainAccountingProcedure();
     boolean provExists = myRecords.searchProvider(provNum);
@@ -53,6 +58,9 @@ public class ManagerController {
     }
   }
   
+  /**
+   * Prints summary report.
+   */
   public void printSummaryReport() {
     myTimer.runMainAccountingProcedure();
     Reports.theSummaryReport.print();
