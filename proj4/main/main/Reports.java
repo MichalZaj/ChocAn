@@ -3,6 +3,9 @@ package main.main;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Reports includes all of the different report types. 
+ */
 public class Reports {
   static List<MemberReport> memberReportsArray = new ArrayList<MemberReport>();
   static List<ProviderReport> providerReportsArray = new ArrayList<ProviderReport>();
@@ -30,11 +33,21 @@ public class Reports {
     return -1;
   }
   
+  /**
+   * This function creates a new member report.
+
+   * @param memberNum is the member the report is being sent to. 
+   */
   public void createNewMemberReport(int memberNum) {
     MemberReport addition = new MemberReport(memberNum);
     memberReportsArray.add(addition);
   }
   
+  /**
+   * This function adds a new service to the member report.
+
+   * @param serviceReport. 
+   */
   public void addMemberService(Service serviceReport, int indexOfMemReport) {
     memberReportsArray.get(indexOfMemReport).addService(serviceReport);
   }
