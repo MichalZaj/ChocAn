@@ -289,8 +289,24 @@ public class RecordsController {
   }
   
   
+  public String getMemName(int memberNum) {
+    for (int i = 0; i < memberRecordsArray.size(); i++) {
+      if (memberRecordsArray.get(i).getMemberNumber() == memberNum) {
+        return memberRecordsArray.get(i).getMemberName();
+      }
+    }
+    return "Error Records controller line 298";
+  }
   
   
+  public String getProvName(int provNum) {
+    for (int i = 0; i < providerRecordsArray.size(); i++) {
+      if (providerRecordsArray.get(i).getProviderNumber() == provNum) {
+        return providerRecordsArray.get(i).getProviderName();
+      }
+    }
+    return "Error Records controller line 308";
+  }
   
   
   

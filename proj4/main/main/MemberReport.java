@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MemberReport {
   public Member theMember;
-  public List<Service> serviceArray = new ArrayList<Service>();
+  public List<Service> serviceArray;
   public RecordsController myController = new RecordsController();
   
   /**
@@ -28,14 +28,32 @@ public class MemberReport {
         
       }
     }
+    serviceArray = new ArrayList<Service>();
   }
   
-  public void addService() {
+  public void addService(Service serviceReport) {
+    String srvDate = serviceReport.dateOfService;
+    String dayOfRecord = serviceReport.dateOfRecording;
+    int provNum = serviceReport.providerNumber;
+    int memNum = serviceReport.memberNumber;
+    int servCode = serviceReport.serviceCode;
+    String comms = serviceReport.comments;
+  
+
+    Service addition = new Service(srvDate, dayOfRecord, provNum, memNum, servCode, comms);
     
+    serviceArray.add(addition);
   }
   
   public void print() {
-
+    System.out.println("===Member Report===");
+    theMember.printMember();
+    System.out.println("----Services Rendered----\n");
+    for (int i = 0; i < serviceArray.size(); i++) {
+      System.out.println("Service NO." + (i + 1));
+      serviceArray.get(i).printServiceForMemReport();
+      System.out.println("-------------------------\n");
+    }
   }
   
 }

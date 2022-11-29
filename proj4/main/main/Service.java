@@ -14,6 +14,13 @@ public class Service {
   int serviceCode;
   String comments;
   
+  String providerName;
+  String nameOfService;
+  double fee;
+  
+  String memberName;
+  
+  
   public Service(String srvDte, Integer prvNum, Integer memNum, Integer srvCde, String coms) {
     dateOfService = (srvDte);
 
@@ -29,7 +36,46 @@ public class Service {
     serviceCode = srvCde;
     
     comments = coms;
+    
+    RecordsController myRecords = new RecordsController();
+    providerName = myRecords.getProvName(prvNum);
+    
+    ProviderDirectory myDirectory = new ProviderDirectory();
+    nameOfService = myDirectory.getServiceName(serviceCode);
+    
+    fee = myDirectory.getServicePrice(serviceCode);
+    
+    memberName = myRecords.getMemName(memberNumber);
+    
+    
   }
+  
+  public Service(String svDte, String rec, Integer prNm, Integer meNm, Integer srvCde, String cms) {
+    dateOfService = (svDte);
+
+    
+    dateOfRecording = rec;
+
+    providerNumber = prNm;
+    
+    memberNumber = meNm;
+    
+    serviceCode = srvCde;
+    
+    comments = cms;
+    
+    RecordsController myRecords = new RecordsController();
+    providerName = myRecords.getProvName(prNm);
+    
+    ProviderDirectory myDirectory = new ProviderDirectory();
+    nameOfService = myDirectory.getServiceName(serviceCode);
+    
+    fee = myDirectory.getServicePrice(serviceCode);
+    
+    memberName = myRecords.getMemName(memberNumber);
+  }
+  
+  
   
   public void printService() {
     System.out.println("Date of Service  : " + dateOfService);
@@ -38,6 +84,22 @@ public class Service {
     System.out.println("Member Number    : " + memberNumber);
     System.out.println("Service Code     : " + serviceCode);
     System.out.println("Comments: " + comments);
+  }
+  
+  public void printServiceForMemReport() {
+    System.out.println("Date of Service  : " + dateOfService);
+    System.out.println("Provider Name    : " + providerName);
+    System.out.println("Service  Name    : " + nameOfService);
+    
+  }
+  
+  public void printServiceForProvider() {
+    System.out.println("Date of Service  : " + dateOfService);
+    System.out.println("Date of Recording: " + dateOfRecording);
+    System.out.println("Member name      : " + memberName);
+    System.out.println("Member Number    : " + memberNumber);
+    System.out.println("Service Code     : " + serviceCode);
+    System.out.println("Fee              : $" + fee);
   }
      
   public void setProviderNumber(int n) {

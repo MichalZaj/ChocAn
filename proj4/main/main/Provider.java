@@ -5,7 +5,7 @@ import java.util.Random;
 /** Individual Provider. */
 public class Provider {
   private String providerName;
-  private int providerNumber;
+  public int providerNumber;
   
   public String streetAddress;
   public String city;

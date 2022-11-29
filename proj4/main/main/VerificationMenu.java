@@ -33,6 +33,7 @@ public class VerificationMenu {
     System.out.println("(P) - Provider");
     System.out.println("(O) - Operator");
     System.out.println("(M) - Manager");
+    System.out.println("(T) - Run main Accounting Procedure");
     System.out.println("(-) - Close System");
     
     String input = s.nextLine();
@@ -66,6 +67,9 @@ public class VerificationMenu {
         System.out.println("Closing system. Goodbye!");
         s.close();
         System.exit(1);
+        break;
+      case("T"):
+        result = 'T';
         break;
 
       default:

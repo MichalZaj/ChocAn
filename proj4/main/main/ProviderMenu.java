@@ -13,6 +13,7 @@ public class ProviderMenu {
   
   ProviderController provController;
   VerificationMenu verMenu;
+  RecordsController recController;
   
   
   /**
@@ -21,6 +22,8 @@ public class ProviderMenu {
   public ProviderMenu() {
     provController = new ProviderController();
     verMenu = new VerificationMenu();
+    recController = new RecordsController();
+    
     
   }
   
@@ -46,10 +49,17 @@ public class ProviderMenu {
           System.out.println("Enter member number for verification:");
           int memberNum = myScanner.nextInt();
           boolean validMember = verMenu.verifyMember(memberNum);
+          boolean isSuspended = recController.checkSuspended(memberNum);
+          
           if (validMember) {
-            System.out.println("Valid Member.");
+            if (recController.checkSuspended(memberNum) == false) {
+              System.out.println("Validated.");
+            } else {
+              System.out.println("Suspended Member. Returning to provider menu.");
+              break;
+            }
           } else {
-            System.out.println("Invalid Member. Exiting to provider menu.");
+            System.out.println("Invalid Number. Returning to provider menu.");
             break;
           }
           System.out.println("Enter service date (MM–DD–YYYY):");
@@ -60,6 +70,12 @@ public class ProviderMenu {
           System.out.println("Enter service code:");
           int myNum = proNum;
           int servCode = myScanner.nextInt();
+          
+          
+          
+          
+          
+          
           System.out.print("Enter a comment:");
           myScanner.nextLine();
           String comms = myScanner.nextLine();

@@ -60,17 +60,19 @@ public class Term {
           ManagerMenu manMenu = new ManagerMenu(); 
           manMenu.prompt();
           break;
-        case('T'):
-          System.out.println("Starting Main Accounting Procedure");
-          break;
         case('-'):
           System.out.println("Closing system. Goodbye!");
           s.close();
           System.exit(1);
           break;
+        case('T'):
+          Timer time = new Timer();
+          time.runMainAccountingProcedure();
+          System.out.println("Main accounting procedure finished.");
+          break;
         default:
           System.out.println("Verification Failed");
-          
+
           break;
       }
       

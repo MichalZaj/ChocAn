@@ -6,6 +6,9 @@ import java.util.List;
 public class Reports {
   static List<MemberReport> memberReportsArray = new ArrayList<MemberReport>();
   static List<ProviderReport> providerReportsArray = new ArrayList<ProviderReport>();
+  static EftReport theEftReport = new EftReport();
+  static SummaryReport theSummaryReport = new SummaryReport();
+  
   
   public Reports() {
 
@@ -25,6 +28,45 @@ public class Reports {
       }
     }
     return -1;
+  }
+  
+  public void createNewMemberReport(int memberNum) {
+    MemberReport addition = new MemberReport(memberNum);
+    memberReportsArray.add(addition);
+  }
+  
+  public void addMemberService(Service serviceReport, int indexOfMemReport) {
+    memberReportsArray.get(indexOfMemReport).addService(serviceReport);
+  }
+  
+  
+  
+  public int doesProvReportExist(int provNum) {
+    for (int i = 0; i < providerReportsArray.size(); i++) {
+      if (providerReportsArray.get(i).theProvider.getProviderNumber() == provNum) {
+        return i;
+      }
+    }
+    return -1;
+  }
+  
+  public void createNewProviderReport(int provNum) {
+    ProviderReport addition = new ProviderReport(provNum);
+    providerReportsArray.add(addition);
+  }
+  
+  public void addProviderService(Service serviceReport, int indexOfProvReport) {
+    providerReportsArray.get(indexOfProvReport).addService(serviceReport);
+  }
+  
+  
+  
+  public void clearReports() {
+    memberReportsArray.clear();
+    providerReportsArray.clear();
+    theEftReport.clear();
+    theSummaryReport.clear();
+    
   }
 }
 

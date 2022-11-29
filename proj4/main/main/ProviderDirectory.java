@@ -11,6 +11,7 @@ public class ProviderDirectory {
   //member variables
   int[] serviceCode;
   String[] serviceDescriptions;
+  double[] prices;
   
   /**
    * Constructor for provider directory.
@@ -41,6 +42,18 @@ public class ProviderDirectory {
     serviceDescriptions[8] = "Chocolate Droppings";
     serviceDescriptions[9] = "Miscellaneous Care";
     
+    prices = new double[10];
+    prices[0] = 10.10;
+    prices[1] = 512.50;
+    prices[2] = 120.20;
+    prices[3] = 15.62;
+    prices[4] = 90.21;
+    prices[5] = 777.77;
+    prices[6] = 42.24;
+    prices[7] = 50.00;
+    prices[8] = 75.00;
+    prices[9] = 100.00;
+    
   }
   
   /**
@@ -49,7 +62,7 @@ public class ProviderDirectory {
   
   public void printDirectory() {
     for (int i = 0; i < 10; i++) {
-      System.out.print(serviceCode[i] + " - " + serviceDescriptions[i] + "\n");
+      System.out.print(serviceCode[i] + " - " + serviceDescriptions[i] + "[$" + prices[i] + "]\n");
     }
     System.out.println();
   }
@@ -73,6 +86,24 @@ public class ProviderDirectory {
       System.out.println("Service not found.");
     }
     System.out.println();
+  }
+  
+  public String getServiceName(int num) {
+    for (int i = 0; i < 10; i++) {
+      if (num == serviceCode[i]) {
+        return serviceDescriptions[i];
+      }
+    }
+    return "Error state - Prov Directory line 95";
+  }
+  
+  public double getServicePrice(int num) {
+    for (int i = 0; i < 10; i++) {
+      if (num == serviceCode[i]) {
+        return prices[i];
+      }
+    }
+    return 0.00;
   }
   
   
