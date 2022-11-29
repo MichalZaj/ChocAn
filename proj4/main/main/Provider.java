@@ -42,16 +42,19 @@ public class Provider {
     return providerNumber;
   }
   
+  /** Gets Provider name. */
   public String getProviderName() {
     return providerName;
   }
   
   //Setters
   
+  /** Sets Provider number. */
   public void setProviderNumber(int desiredNum) {
     providerNumber = desiredNum;
   }
   
+  /** Sets Provider name. */
   public void setProviderName(String name) {
     providerName = name;
   }
