@@ -10,11 +10,9 @@ import java.util.Scanner;
  */
 
 public class ProviderMenu {
-  
   ProviderController provController;
   VerificationMenu verMenu;
   RecordsController recController;
-  
   
   /**
    * Provider menu prompt.
@@ -23,14 +21,11 @@ public class ProviderMenu {
     provController = new ProviderController();
     verMenu = new VerificationMenu();
     recController = new RecordsController();
-    
-    
   }
   
   /**
    * Main menu prompt.
    */
-  
   public void prompt() {
     Scanner myScanner = new Scanner(System.in);
     while (true) {
@@ -49,7 +44,6 @@ public class ProviderMenu {
           System.out.println("Enter member number for verification:");
           int memberNum = myScanner.nextInt();
           boolean validMember = verMenu.verifyMember(memberNum);
-          boolean isSuspended = recController.checkSuspended(memberNum);
           
           if (validMember) {
             if (recController.checkSuspended(memberNum) == false) {
