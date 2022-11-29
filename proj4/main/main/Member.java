@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * This class provides a template for Members.
 
- * @author cjmes
+ * @author cpaier
  *
  */
 public class Member {
