@@ -31,6 +31,11 @@ public class MemberReport {
     serviceArray = new ArrayList<Service>();
   }
   
+  /**
+   * This function will create a new service available to members
+
+   * @param serviceReport report that the new service information will be added to
+   */
   public void addService(Service serviceReport) {
     String srvDate = serviceReport.dateOfService;
     String dayOfRecord = serviceReport.dateOfRecording;
@@ -45,6 +50,9 @@ public class MemberReport {
     serviceArray.add(addition);
   }
   
+  /**
+   * This function will print the current member report
+   */
   public void print() {
     System.out.println("===Member Report===");
     theMember.printMember();
