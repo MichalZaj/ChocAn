@@ -26,6 +26,9 @@ public class EftReport {
     feeArray = new ArrayList<Double>();
   }
   
+  /**
+   * This function populates the Eft report.
+   */
   public void populateReport() {
     for (int i = 0; i < Reports.providerReportsArray.size(); i++) {
       providerArray.add(Reports.providerReportsArray.get(i).theProvider.getProviderName());
@@ -33,6 +36,9 @@ public class EftReport {
     }
   }
   
+  /**
+   * This function prints the Eft report.
+   */
   public void printReport() {
     System.out.println("===EFT Report===");
     System.out.println("Provider Name | Fee due");
@@ -41,6 +47,9 @@ public class EftReport {
     }
   }
   
+  /**
+   * This function clears the report.
+   */
   public void clear() {
     providerArray.clear();
     feeArray.clear();

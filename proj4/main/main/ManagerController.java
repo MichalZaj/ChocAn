@@ -13,7 +13,9 @@ public class ManagerController {
   Timer myTimer;
   RecordsController myRecords;
   
-
+  /**
+   * This is the default manager controller constructor.
+   */
   public ManagerController() {
     myReports = new Reports();
     myTimer = new Timer();
