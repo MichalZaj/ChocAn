@@ -22,7 +22,7 @@ public class Operator {
   /**
    * This returns the operator's number.
 
-   * @return operators number.
+   * @return operator number.
    */
   public int getOpNumber() {
     return operatorNumber;
