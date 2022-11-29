@@ -118,6 +118,15 @@ public class VerificationMenu {
     return result;
   }
   
+  public boolean verifyProvider(int num) {
+    boolean result = false;
+    boolean isValid = myController.searchProvider(num);
+    if (isValid) {
+      result = true;
+    }
+    return result; 
+  }
+  
   /**
    * Verifies manager.
 

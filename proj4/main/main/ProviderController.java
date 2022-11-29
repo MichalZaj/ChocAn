@@ -38,6 +38,11 @@ public class ProviderController {
     serviceRecord.print();
   }
   
+  public boolean doesServiceExist(int servCode) {
+    ProviderDirectory provDirectory = new ProviderDirectory();
+    return provDirectory.findService(servCode);
+  }
+  
   
   
 }

@@ -106,6 +106,18 @@ public class ProviderDirectory {
     return 0.00;
   }
   
+  public boolean findService(int num) {
+    boolean found = false;
+    for (int i = 0; i < 10; i++) {
+      if (num == serviceCode[i]) {
+        found = true;
+        
+      }
+    }
+    return found;
+    
+  }
+  
   
   
 }

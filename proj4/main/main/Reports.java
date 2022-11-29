@@ -39,6 +39,16 @@ public class Reports {
     memberReportsArray.get(indexOfMemReport).addService(serviceReport);
   }
   
+  public boolean printMemReport(int memNum) {
+    for (int i = 0; i < memberReportsArray.size(); i++) {
+      if (memberReportsArray.get(i).theMember.getMemberNumber() == memNum) {
+        memberReportsArray.get(i).print();
+        return true;
+      }
+    }
+    return false;
+  }
+  
   
   
   public int doesProvReportExist(int provNum) {
@@ -48,6 +58,16 @@ public class Reports {
       }
     }
     return -1;
+  }
+  
+  public boolean printProvReport(int provNum) {
+    for (int i = 0; i < providerReportsArray.size(); i++) {
+      if (providerReportsArray.get(i).theProvider.getProviderNumber() == provNum) {
+        providerReportsArray.get(i).print();
+        return true;
+      }
+    }
+    return false;
   }
   
   public void createNewProviderReport(int provNum) {

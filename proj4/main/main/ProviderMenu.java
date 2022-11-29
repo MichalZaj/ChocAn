@@ -64,17 +64,29 @@ public class ProviderMenu {
           }
           System.out.println("Enter service date (MM–DD–YYYY):");
           String myDate = myScanner.next();
-          myDate.length(); //This line has no function, it is to get rid of a checkstyle problem. 
+          myDate.length(); //This line has no function, it is to get rid of a check style problem. 
           System.out.println("Confirm Provider number:");
           int proNum = myScanner.nextInt();
+       
+          
+          boolean validProvider = verMenu.verifyProvider(proNum);
+          if (!validProvider) {
+            System.out.println("Invalid provider number. Returning to provider menu.");
+            break;
+          }
+          
+          
           System.out.println("Enter service code:");
-          int myNum = proNum;
+          
           int servCode = myScanner.nextInt();
           
+          boolean serviceExists = provController.doesServiceExist(servCode);
+          if (!serviceExists) {
+            System.out.println("Service does not exist. Returning to provider menu.");
+            break;
+          }
           
-          
-          
-          
+          int myNum = proNum; //This line has no function, it fixes a check style problem
           
           System.out.print("Enter a comment:");
           myScanner.nextLine();
