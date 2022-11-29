@@ -13,6 +13,10 @@ public class SummaryReport {
   int numProvidersWithService;
   int totalConsultations;
   double overallFee;
+  
+  /**
+   * Summary Report creates space for all of the info for the report.
+   */
 
   public SummaryReport() {
     providersToBePaid = new ArrayList<String>();
@@ -22,6 +26,10 @@ public class SummaryReport {
     totalConsultations = 0;
     overallFee = 0;
   }
+  
+  /**
+   * PopulateReport adds info to the report.
+   */
   
   public void populateReport() {
     int runningNumConsults = 0;
@@ -40,6 +48,10 @@ public class SummaryReport {
     overallFee = runningFee;
   }
   
+  /**
+   * Print prints out the report.
+   */
+  
   public void print() {
     System.out.println("===Summary Report===");
     System.out.println("Provider | Number of Consults | Fee due");
@@ -52,6 +64,10 @@ public class SummaryReport {
     System.out.println("Total consultations: " + totalConsultations);
     System.out.println("Total fee for this week: $" + overallFee);
   }
+  
+  /**
+   * Clear clears all of the report info.
+   */
   
   public void clear() {
     providersToBePaid.clear();
