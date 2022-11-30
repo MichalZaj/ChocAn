@@ -75,7 +75,7 @@ public class ProviderDirectory {
     boolean found = false;
     for (int i = 0; i < 10; i++) {
       if (num == serviceCode[i]) {
-        System.out.println("Service Found : " + serviceDescriptions[i]);
+        System.out.println("Service Found : " + serviceDescriptions[i] + " - $" + prices[i]);
         found = true;
       }
     }

@@ -36,8 +36,8 @@ public class ProviderController {
   /**
    * This method adds a service to the service record.
    */
-  public void addEntry(String srvDte, Integer prvNum, Integer memNum, Integer srvCde, String coms) {
-    serviceRecord.addArray(srvDte, prvNum, memNum, srvCde, coms);
+  public void billChocan(String svDte, Integer prvNum, Integer meNum, Integer srvCde, String coms) {
+    serviceRecord.addArray(svDte, prvNum, meNum, srvCde, coms);
   }
   
   /**
