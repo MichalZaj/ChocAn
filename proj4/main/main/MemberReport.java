@@ -2,14 +2,19 @@ package main.main;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * This is the member report class.
 
+ * @author cjmes
+ *
+ */
 public class MemberReport {
   public Member theMember;
   public List<Service> serviceArray;
   public RecordsController myController = new RecordsController();
   
   /**
-   * This function will create a new member report based on the given member 
+   * This function will create a new member report based on the given member.
 
    * @param memberNumber desired member to be accessed in report class
    */
@@ -32,7 +37,7 @@ public class MemberReport {
   }
   
   /**
-   * This function will create a new service available to members
+   * This function will create a new service available to members.
 
    * @param serviceReport report that the new service information will be added to
    */
@@ -51,7 +56,7 @@ public class MemberReport {
   }
   
   /**
-   * This function will print the current member report
+   * This function will print the current member report.
    */
   public void print() {
     System.out.println("===Member Report===");

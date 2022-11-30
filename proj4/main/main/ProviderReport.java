@@ -3,6 +3,12 @@ package main.main;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is the provider report class.
+
+ * @author cjmes
+ *
+ */
 public class ProviderReport {
   public Provider theProvider;
   public List<Service> serviceArray;
@@ -30,7 +36,12 @@ public class ProviderReport {
     }
     serviceArray = new ArrayList<Service>();
   }
-  
+  /**
+   * This function adds a service report to the report.
+
+   * @param serviceReport is the desired service to be added.
+
+   */
   public void addService(Service serviceReport) {
     String srvDate = serviceReport.dateOfService;
     String dayOfRecord = serviceReport.dateOfRecording;
@@ -44,6 +55,9 @@ public class ProviderReport {
     serviceArray.add(addition);
   }
   
+  /**
+   * This function prints the provider report.
+   */
   public void print() {
     System.out.println("===Provider Report===");
     theProvider.printProvider();
@@ -60,6 +74,12 @@ public class ProviderReport {
     System.out.println("Total fee to be collected    : $" + runningFee);
     
   }
+  
+  /**
+   * This function gets the fee from the provider report. Only used by the summary report class.
+
+   * @return the overall fee
+   */
   
   public double getFee() {
     double runningFee = 0;
