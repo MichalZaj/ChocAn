@@ -46,12 +46,19 @@ public class Reports {
   /**
    * This function adds a new service to the member report.
 
-   * @param serviceReport. 
+   * @param serviceReport is the service that will be added. 
    */
   public void addMemberService(Service serviceReport, int indexOfMemReport) {
     memberReportsArray.get(indexOfMemReport).addService(serviceReport);
   }
   
+  /**
+   * This function prints a member report.
+
+   * @param memNum this is the member num.
+
+   * @return a boolean value, true if successfully printed, false if not.
+   */
   public boolean printMemReport(int memNum) {
     for (int i = 0; i < memberReportsArray.size(); i++) {
       if (memberReportsArray.get(i).theMember.getMemberNumber() == memNum) {
@@ -62,7 +69,13 @@ public class Reports {
     return false;
   }
   
-  
+  /**
+   * This function determines if a provider report exists.
+
+   * @param provNum this is the desired provider number.
+
+   * @return the index of the provider num in the array, or -1 if it does not exist.
+   */
   
   public int doesProvReportExist(int provNum) {
     for (int i = 0; i < providerReportsArray.size(); i++) {
@@ -73,6 +86,13 @@ public class Reports {
     return -1;
   }
   
+  /**
+   * This function prints the provider report.
+
+   * @param provNum the desired provider number.
+
+   * @return true if successful, false if not.
+   */
   public boolean printProvReport(int provNum) {
     for (int i = 0; i < providerReportsArray.size(); i++) {
       if (providerReportsArray.get(i).theProvider.getProviderNumber() == provNum) {
@@ -93,7 +113,9 @@ public class Reports {
   }
   
   
-  
+  /**
+   * This function clears all report for a new main accounting procedure. 
+   */
   public void clearReports() {
     memberReportsArray.clear();
     providerReportsArray.clear();

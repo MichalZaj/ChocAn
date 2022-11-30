@@ -2,16 +2,19 @@ package main.main;
 
 import java.util.Scanner;
 /**
- * 
- *    @author cjmes
+ * This is the main terminal that runs the Chocan System.
+
+ *@author cjmes
  *    
- *    This is the main file that runs the system
  */
 
 public class Term {
-	
 
+  /**
+   * Main.
 
+   * @param args N/A.
+   */
   public static void main(String[] args) {
     
 
