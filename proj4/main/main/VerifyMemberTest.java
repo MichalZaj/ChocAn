@@ -1,7 +1,5 @@
 package main.main;
 
-//import static org.junit.Assert.*;
-
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
