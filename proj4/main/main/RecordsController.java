@@ -175,7 +175,7 @@ public class RecordsController {
         break;
         
       case("E"):
-        System.out.println("Editing provider. Enter a member number");
+        System.out.println("Editing provider. Enter a provider number");
         int providerNum = myScanner.nextInt();
         
        

@@ -30,7 +30,7 @@ public class ManagerMenu {
       System.out.println("(P) - Access Provider Report");
       System.out.println("(M) - Access Member Report");
       System.out.println("(S) - Access Summary Report");
-      System.out.println("(Q) - Exit operator terminal");
+      System.out.println("(Q) - Exit manager terminal.");
       System.out.println("(-) - Exit system");
       System.out.println();
 

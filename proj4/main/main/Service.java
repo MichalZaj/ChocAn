@@ -5,6 +5,12 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/** Service Class contains all information about a service. 
+ *
+ * @author thoma
+ *
+ */
+
 public class Service {
   //member variables
   String dateOfService;
@@ -13,13 +19,20 @@ public class Service {
   int memberNumber;
   int serviceCode;
   String comments;
-  
   String providerName;
   String nameOfService;
   double fee;
   
   String memberName;
   
+  /** Service is a constructor when no info is present. 
+   *
+   * @param srvDte is the date of service.
+   * @param prvNum is the number of the provider that is working with this service. 
+   * @param memNum is the number of the member that had this service provided to them. 
+   * @param srvCde is the code for the service. 
+   * @param coms is the comments the provider made about the service.
+   */
   
   public Service(String srvDte, Integer prvNum, Integer memNum, Integer srvCde, String coms) {
     dateOfService = (srvDte);
@@ -50,6 +63,16 @@ public class Service {
     
   }
   
+  /** This is also a constructor for service, variables are very similar.
+   *
+   * @param svDte is the date of service. 
+   * @param rec is the date of recording.
+   * @param prNm is the provider number. 
+   * @param meNm is the member number. 
+   * @param srvCde is the service code. 
+   * @param cms is the comments on the service. 
+   */
+  
   public Service(String svDte, String rec, Integer prNm, Integer meNm, Integer srvCde, String cms) {
     dateOfService = (svDte);
 
@@ -75,7 +98,9 @@ public class Service {
     memberName = myRecords.getMemName(memberNumber);
   }
   
-  
+  /**
+   * Prints out information about a service. 
+   */
   
   public void printService() {
     System.out.println("Date of Service  : " + dateOfService);
@@ -86,12 +111,20 @@ public class Service {
     System.out.println("Comments: " + comments);
   }
   
+  /**
+   * Prints out relevant service information for member reports. 
+   */
+  
   public void printServiceForMemReport() {
     System.out.println("Date of Service  : " + dateOfService);
     System.out.println("Provider Name    : " + providerName);
     System.out.println("Service  Name    : " + nameOfService);
     
   }
+  
+  /**
+   * Prints out relevant service info for provider report. 
+   */
   
   public void printServiceForProvider() {
     System.out.println("Date of Service  : " + dateOfService);

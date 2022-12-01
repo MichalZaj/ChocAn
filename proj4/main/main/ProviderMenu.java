@@ -86,7 +86,7 @@ public class ProviderMenu {
           myScanner.nextLine();
           String comms = myScanner.nextLine();
           
-          provController.addEntry(myDate, myNum, memberNum, servCode, comms);
+          provController.billChocan(myDate, myNum, memberNum, servCode, comms);
           System.out.println();
           break;
           

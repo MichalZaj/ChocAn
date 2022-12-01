@@ -109,6 +109,13 @@ public class VerificationMenu {
     return 'F';
   }
   
+  /**
+   * Verifies member.
+
+   * @param num member number.
+
+   * @return true if valid, false if not.
+   */
   public boolean verifyMember(int num) {
     boolean result = false;
     boolean isValid = myController.searchMember(num);
@@ -118,6 +125,13 @@ public class VerificationMenu {
     return result;
   }
   
+  /**
+   * Verifies provider.
+
+   * @param num is the desired provider number.
+
+   * @return returns true if provider is valid, false if not.
+   */
   public boolean verifyProvider(int num) {
     boolean result = false;
     boolean isValid = myController.searchProvider(num);
