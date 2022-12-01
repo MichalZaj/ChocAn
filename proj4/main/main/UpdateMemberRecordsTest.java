@@ -2,10 +2,11 @@ package main.main;
 
 import static org.junit.Assert.*;
 
-import main.main.Member;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.After.*;
+import org.junit.Before.*;
+import org.junit.Test.*;
 
+import main.main.Member;
 
 /**
  * Tests editing member information.
@@ -23,12 +24,7 @@ public class UpdateMemberRecordsTest {
   String zip = "35401";
   Member newMember;
 
-  /**
-   * Sets up a new Member object to be tested on.
-   *
-   *@author gabec
-   */
-  @BeforeClass
+  @Before
   public void setUp() throws Exception {
     newMember = new Member(memberName, streetAddress, city, state, zip);
     newMember.setMemberName("Jack Smith");
@@ -42,11 +38,11 @@ public class UpdateMemberRecordsTest {
   
   @Test
   public void testSetSuspension() {
-    assertEquals(false, newMember.isSuspended());
+	  assertEquals(false, newMember.isSuspended());
   }
   
   @Test
   public void testGetMemberNumber() {
-    assertEquals(200200200, newMember.getMemberNumber());
+	  assertEquals(200200200, newMember.getMemberNumber());
   }
 }
