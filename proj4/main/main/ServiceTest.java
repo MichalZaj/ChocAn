@@ -30,7 +30,7 @@ public class ServiceTest {
     int th = serv.getProviderNumber();
     assertTrue(th != 0);
   }
-	
+
   @Test
   public void testsc() {
     serv.setServiceCode(69);
