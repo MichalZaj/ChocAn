@@ -2,7 +2,13 @@ package main.main;
 
 import java.util.Random;
 
-/** Individual Provider. */
+
+/**
+ * This class is a template for the provider.
+
+ * @author Michal
+ *
+ */
 public class Provider {
   private String providerName;
   public int providerNumber;
