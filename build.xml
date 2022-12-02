@@ -66,6 +66,15 @@
     <target name="clean">
         <delete dir="bin"/>
     </target>
+    <target name="createJar">
+    	<jar destfile = "project4.jar">
+    		<fileset dir="bin/" includes="**/*.class"></fileset>
+    		<manifest>
+    			<attribute name="Term" value="fall2022team17.project4.proj4.main.main.Term"></attribute>
+    		</manifest>
+    	</jar>
+    </target>
+    	
     <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
     <target name="build-subprojects"/>
