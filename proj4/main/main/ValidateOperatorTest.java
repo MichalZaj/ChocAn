@@ -1,6 +1,7 @@
 package main.main;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -50,9 +51,6 @@ public class ValidateOperatorTest {
   @Test
   public void operatorAddProvider() { //operator is verified - can now add provider and get name
     opMenu.myController.addProvider("Bill Gates");
-    assertTrue(opMenu.myController.providerRecordsArray.get(0).getProviderName() == "Bill Gates");
-   
-   
-
+    assertTrue(RecordsController.providerRecordsArray.get(0).getProviderName() == "Bill Gates");
   }
 }
