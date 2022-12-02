@@ -67,7 +67,7 @@
         <delete dir="bin"/>
     </target>
     <target name="createJar">
-    	<jar destfile = "project4.jar">
+    	<jar destfile = "release\project4.jar">
     		<fileset dir="bin/" includes="**/*.class"></fileset>
     		<manifest>
     			<attribute name="Main-Class" value="main.main.Term"></attribute>
