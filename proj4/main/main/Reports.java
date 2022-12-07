@@ -123,6 +123,43 @@ public class Reports {
     theSummaryReport.clear();
     
   }
+  
+  /**
+   * Prints all provider reports.
+   */
+  public void printAllProviderReports() {
+    for (int i = 0; i < providerReportsArray.size(); i++) {
+      providerReportsArray.get(i).print();
+    }
+  }
+  
+  /**
+   * Prints all member reports.
+   */
+  public void printAllMemberReports() {
+    for (int i = 0; i < memberReportsArray.size(); i++) {
+      memberReportsArray.get(i).print();
+    }
+  }
+  
+  /**
+   * Prints all reports.
+   */
+  public void printAllReports() {
+    System.out.println("====MEMBER REPORTS====");
+    printAllMemberReports();
+    System.out.println("\n\n\n");
+    System.out.println("====PROVIDER REPORTS====");
+    printAllProviderReports();
+    System.out.println("\n\n\n");
+    System.out.println("====EFT REPORTS====");
+    theEftReport.printReport();
+    System.out.println("\n\n\n");
+    System.out.println("====SUMMARY REPORTS====");
+    theSummaryReport.print();
+    System.out.println("\n\n\n");
+    
+  }
 }
 
 

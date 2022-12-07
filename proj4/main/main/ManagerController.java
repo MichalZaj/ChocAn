@@ -35,6 +35,9 @@ public class ManagerController {
    */
   public boolean printMemberReport(int memNum) {
     myTimer.runMainAccountingProcedure();
+    myReports.printAllMemberReports();
+    return true;
+    /*
     boolean memExists = myRecords.searchMember(memNum);
     if (memExists) {
       boolean returnVal = myReports.printMemReport(memNum);
@@ -42,6 +45,7 @@ public class ManagerController {
     } else {
       return false;
     }
+    */
   }
 
   /**
@@ -49,6 +53,9 @@ public class ManagerController {
    */
   public boolean printProviderReport(int provNum) {
     myTimer.runMainAccountingProcedure();
+    myReports.printAllProviderReports();
+    return true;
+    /*
     boolean provExists = myRecords.searchProvider(provNum);
     if (provExists) {
       boolean returnVal = myReports.printProvReport(provNum);
@@ -56,6 +63,7 @@ public class ManagerController {
     } else {
       return false;
     }
+    */
   }
   
   /**
